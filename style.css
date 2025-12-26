@@ -1,0 +1,727 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Navigation Bar */
+.navbar {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    padding: 4px 12px;
+    background: rgb(11, 10, 10);
+    z-index: 1000;
+    height: 130px;
+   
+}
+
+.logo img {
+    width: 126px;
+    height: 96px;
+    object-fit: cover;
+    border-radius: 8px;
+    display: block;
+    flex-shrink: 0;
+    padding-top: 10px;
+    /* Make dark logos appear white on the black navbar */
+    filter: brightness(0) invert(1) contrast(130%);
+    margin-top: -22px; /* increase overlap so navbar is visually shorter */
+}
+
+.logo-text {
+    color: #ffffff;
+    font-size: 14px;
+    margin-top: 6px;
+    font-weight: 600;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 32px;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.nav-links li a:hover {
+    color: blue;
+}
+
+.hamburger {
+    display: none;
+}
+
+/* Home Section */
+.home {
+    width: 100%;
+    /* subtract fixed navbar height so background fits exactly beneath it */
+    min-height: calc(100vh);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Use a lighter skyblue that scales well on mobile */
+    color: white;
+    text-align: center;
+    padding-top: 80px; /* space for fixed navbar */
+    background-position: center;
+    background-size: cover;
+    background: #0d0d0d;
+}
+
+.home-content h1 {
+    font-size: 60px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.home-content p {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+/* NEW / UPDATED: Home Section Cards (Glass Effect) */
+.home-cards {
+    display: flex;
+    gap: 20px;
+    margin-top: 40px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.home-cards .card {
+    background: rgba(181, 151, 172, 0.2);     /* NEW: Glass effect */
+    backdrop-filter: blur(10px);               /* NEW */
+    -webkit-backdrop-filter: blur(10px);       /* NEW */
+    border: 1px solid rgba(255, 255, 255, 0.3);/* NEW */
+
+    padding: 20px;
+    border-radius: 10px;
+    width: 250px;
+    text-align: center;
+    color: #ffffff;                            /* NEW */
+    box-shadow: 0px 4px 12px rgba(0,0,0,0.25); /* NEW */
+    transition: 0.3s;                          /* NEW */
+}
+
+.home-cards .card:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.28);     /* NEW: hover brighter */
+    box-shadow: 0px 8px 20px rgba(0,0,0,0.35); /* NEW: hover shadow */
+}
+
+.home-cards .card h3 {
+    margin-bottom: 10px;
+    font-size: 20px;
+    color: #ffffff;                             /* NEW */
+}
+
+.home-cards .card p {
+    font-size: 14px;
+    line-height: 1.5;
+    color: white;           /* NEW */
+}
+
+/* Smooth Scroll */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Contact form styles removed — not used in current markup. */
+
+/* RESPONSIVE DESIGN */
+
+/* Tablets */
+@media (max-width: 1024px) {
+    .navbar {
+        padding: 0 20px;
+    }
+    .nav-links {
+        gap: 20px;
+    }
+    .home-content h1 {
+        font-size: 48px;
+    }
+    .home-content p {
+        font-size: 18px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+        font-size: 28px;
+        cursor: pointer;
+        color: white;
+    }
+
+    .navbar {
+        height: 120px; /* smaller navbar on narrow screens */
+        padding: 8px 12px;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        display: none;
+        /* semi-transparent (glass) background so page is visible underneath */
+        background: rgba(255,255,255,0.55);
+        backdrop-filter: blur(6px);
+        -webkit-backdrop-filter: blur(6px);
+        position: absolute;
+        top: calc(100% + 6px); /* place menu immediately below navbar */
+        right: 0;
+        width: 100%;
+        padding: 0; /* remove extra vertical padding to avoid unwanted gap */
+        gap: 0;
+        box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+
+    /* When menu is open, ensure items have spacing and full-width clickable area */
+    .nav-links.show li {
+        width: 100%;
+        text-align: center;
+        padding: 14px 0;
+    }
+
+    .nav-links.show li a {
+        display: block;
+        width: 100%;
+        color: white;
+        padding: 8px 0;
+    }
+
+    .home-content h1 {
+        font-size: 36px;
+    }
+
+    .home-content p {
+        font-size: 16px;
+    }
+
+    .home-cards {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .btn {
+        width: 100%;
+    }
+
+    .form-row {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+    .home-content h1 {
+        font-size: 28px;
+    }
+    .home-content p {
+        font-size: 14px;
+    }
+    .navbar {
+        height: 120px; /* compact navbar on small phones */
+        padding: 8px 12px;
+    }
+    /* push logo image down slightly on very small screens */
+    .logo img {
+        margin-top: 6px;
+        max-height: 84px;
+        width: 96px;
+    }
+    .btn {
+        font-size: 14px;
+        padding: 10px 15px;
+    }
+}
+/* -------------------------------
+   SERVICES SECTION
+----------------------------------*/
+.services-section {
+    padding: 80px 20px;
+    background: #0d0d0d;
+    text-align: center;
+    /* background-color: #0d0d0d; */
+}
+
+.services-section h2 {
+    font-size: 36px;
+    color: #2A7B9B;
+    margin-bottom: 40px;
+}
+
+/* Services Container */
+.services-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+}
+
+/* Service Cards */
+.service-card {
+    background: rgb(4, 4, 4);
+    width: 280px;
+    padding: 25px;
+    border-radius: 12px;
+    text-align: left;
+    box-shadow: 0px 4px 15px rgba(0,0,0,0.15);
+    transition: 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0px 8px 25px rgba(0,0,0,0.25);
+}
+
+.service-card h3 {
+    font-size: 20px;
+    color: #2A7B9B;
+    margin-bottom: 10px;
+}
+
+.service-card p {
+    font-size: 15px;
+    line-height: 1.5;
+    color: #444;
+}
+
+/* -------------------------------
+   RESPONSIVE DESIGN start 
+----------------------------------*/
+
+/* Tablets */
+@media (max-width: 768px) {
+    .services-section h2 {
+        font-size: 30px;
+    }
+
+    .service-card {
+        width: 90%;
+    }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+    .services-section h2 {
+        font-size: 26px;
+    }
+
+    .service-card {
+        width: 100%;
+        padding: 20px;
+    }
+}
+/* -------------------------------
+   RESPONSIVE DESIGN end 
+----------------------------------*/
+
+/* -------------------------------
+   PRODUCTS SECTION start
+----------------------------------*/
+.products-section {
+    padding: 80px 20px;
+    background: #0d0d0d;
+    text-align: center;
+}
+
+.products-section h2 {
+    font-size: 36px;
+    color: #2A7B9B;
+    margin-bottom: 40px;
+}
+
+/* Products Container */
+.products-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+    
+}
+
+/* Product Cards */
+.product-card {
+    background: #ffffff;
+    width: 280px;
+    padding: 25px;
+    border-radius: 12px;
+    text-align: left;
+    box-shadow: 0px 4px 15px rgba(0,0,0,0.12);
+    transition: 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0px 8px 25px rgba(0,0,0,0.25);
+}
+
+/* Remove default underline for product links and preserve card styling */
+.product-card,
+.product-card:link,
+.product-card:visited,
+.product-card:hover,
+.product-card:active {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Title & Text */
+.product-card h3 {
+    font-size: 20px;
+    color: #2A7B9B;
+    margin-bottom: 10px;
+}
+
+.product-card p {
+    font-size: 15px;
+    line-height: 1.5;
+    color: #444;
+}
+
+/* -------------------------------
+   RESPONSIVE DESIGN
+----------------------------------*/
+
+/* Tablets */
+@media (max-width: 768px) {
+    .products-section h2 {
+        font-size: 30px;
+    }
+
+    .product-card {
+        width: 90%;
+    }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+    .products-section h2 {
+        font-size: 26px;
+    }
+
+    .product-card {
+        width: 100%;
+        padding: 20px;
+    }
+}
+/* -------------------------------
+   PRODUCTS SECTION end
+----------------------------------*/
+
+
+/* -------------------------------
+   testimonials SECTION start
+----------------------------------*/
+
+.testimonials-section {
+    padding: 80px 20px;
+    background: #0d0d0d; 
+    color: #ffffff;
+    text-align: center;
+}
+
+
+/* Section Headings */
+.testimonials-title {
+    text-align: center;
+    font-size: 38px;
+    font-weight: 700;
+    background: linear-gradient(90deg, #8dbfcb, #7ad9ff, #4b3ca5);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    
+}
+
+.testimonials-subtitle {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 18px;
+    color: rgba(255,255,255,0.85);
+}
+
+/* Carousel Container */
+.Carousel {
+    margin: 100px auto;
+    width: 90%;
+    overflow: hidden;
+    display: flex;
+    position: relative;
+}
+
+/* Hide scrollbar */
+.Carousel::-webkit-scrollbar {
+    display: none;
+}
+
+/* Moving group */
+.group {
+    display: flex;
+    gap: 1em;
+    animation: scroll 12s linear infinite;
+    padding-right: 1em;
+}
+
+/* Glass Effect Cards */
+.Carousel-card.glass {
+    flex: 0 0 15em;
+    padding: 1.5em;
+    border-radius: 12px;
+
+    /* Glass style */
+    background: rgba(8, 68, 80, 0.4);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(244, 11, 46, 0.25);
+    padding: 20px;
+    width: 280px;
+    min-height: 180px;
+    
+    flex-shrink: 0;
+}
+
+/* Colorful Names */
+.Carousel-card .name {
+    font-size: 22px;
+    font-weight: 500;
+    background: black;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    margin-bottom: 8px;
+}
+
+.Carousel-card .text {
+    font-size: 15px;
+    color: #ffffff;
+    line-height: 1.5;
+}
+
+.Carousel-card .name {
+    color: #ffffff;
+    background: none;
+    -webkit-background-clip: initial;
+}
+
+/* SAME animation (your exact one) */
+@keyframes scroll {
+    0%   { transform: translateX(0); }
+    100% { transform: translateX(-100%); }
+}
+
+/* Pause carousel animation when user hovers the carousel */
+.Carousel:hover .group {
+    animation-play-state: paused;
+}
+
+/* -------------------------------
+   testimonials SECTION start
+----------------------------------*/
+
+/* BLOG SECTION */
+.blogs-section {
+    padding: 80px 20px;
+    text-align: center;
+    background: #0d0d0d;
+}
+
+/* Title */
+.blogs-title {
+    font-size: 38px;
+    font-weight: 700;
+    background: linear-gradient(90deg, #7ad9ff, #ffcd5e, #ff7eb3);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    margin-bottom: 10px;
+}
+
+/* Subtitle */
+.blogs-subtitle {
+    color: #555;
+    font-size: 18px;
+    margin-bottom: 40px;
+}
+
+/* Container for cards */
+.blogs-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+/* Blog card with glass effect */
+.blog-card {
+    width: 300px;
+    padding: 25px;
+    border-radius: 12px;
+
+    /* Glass Effect */
+    background: rgba(255, 255, 255, 0.18);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+
+    box-shadow: 0px 5px 20px rgba(0,0,0,0.2);
+    text-align: left;
+    transition: 0.3s;
+}
+
+.blog-card:hover {
+    transform: translateY(-6px);
+    background: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+/* Blog Title */
+.blog-heading {
+    font-size: 22px;
+    font-weight: 700;
+    background: linear-gradient(90deg, #ff7eb3, #7ad9ff);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+/* Blog text */
+.blog-text {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 15px;
+    margin: 12px 0 18px 0;
+    line-height: 1.5;
+}
+
+/* Read more link */
+.blog-link {
+    font-weight: 600;
+    color: #ffcd5e;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.blog-link:hover {
+    color: #713838;
+}
+
+
+
+/* Footer Section - Adjusted Height */
+.footer {
+    background: #0d0d0d;
+    padding: 25px 0; /* Reduced from 40px to 25px for compact look */
+    color: white;
+    text-align: center;
+    height: auto; /* keep auto so it adjusts to content */
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+.footer-section {
+    width: 250px;
+    margin: 15px 0; /* Reduced margin */
+}
+
+.footer-section h3 {
+    margin-bottom: 10px; /* Reduced spacing */
+    color: #00aaff;
+    font-size: 20px;
+}
+
+.footer-section a {
+    display: block;
+    color: #ccc;
+    margin: 4px 0; /* Reduced spacing between links */
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.footer-section a:hover {
+    color: #00aaff;
+}
+
+/* Social Icons */
+/* Social Icons Container */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+    margin-top: 10px;
+}
+
+/* Base icon style */
+.social-icons .icon {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.05); /* subtle glass effect */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 5px rgba(0,0,0,0.2);
+}
+
+/* SVG inside icon */
+.social-icons .icon svg {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.3s ease, filter 0.3s ease;
+    fill: currentColor;
+}
+
+/* Individual colors */
+.social-icons .instagram svg {
+    fill: url(#instaGrad); /* Gradient */
+}
+
+.social-icons .twitter svg {
+    color: #1DA1F2; /* Twitter Blue */
+}
+
+.social-icons .linkedin svg {
+    color: #0A66C2; /* LinkedIn Blue */
+}
+
+/* Hover effect - glow + scale */
+.social-icons .icon:hover {
+    transform: scale(1.3);
+    background: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 0 15px rgba(255,255,255,0.5); /* glow effect */
+}
+
+.social-icons .icon:hover svg {
+    transform: scale(1.2);
+    filter: drop-shadow(0 0 6px rgba(255,255,255,0.8));
+}
+
+

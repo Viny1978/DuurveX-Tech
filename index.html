@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Company Website</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="logo">
+            <img src="image/logo.png" alt="Company Logo">
+            <p class="logo-text">Powered By Essential Performance LLC</p>
+        </div>
+
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#home">Home</a></li>
+            <!-- <li><a href="#about">About</a></li> -->
+            <li><a href="#services">Services</a></li>
+            <li><a href="#products">Products</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+
+        <!-- Hamburger menu for mobile -->
+        <div class="hamburger" onclick="toggleMenu()">☰</div>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home" class="home" >
+        <div class="home-content">
+            <!-- <div class="logo">
+              <img src="image/logo.png" alt="Company Logo">
+            </div> -->
+
+                <h1>DuurveX-Tech</h1>
+            <!-- START: Three Cards -->
+            <div class="home-cards">
+                <div class="card">
+                    <h3>Cutting-Edge Solutions</h3>
+                    <p>We design innovative solutions that optimize your workflow, improve productivity, and deliver measurable results.</p>
+                </div>
+                <div class="card">
+                    <h3>AI & Machine Learning</h3>
+                    <p>Our AI and ML models predict trends, automate processes, and help you make smarter data-driven decisions.</p>
+                </div>
+                <div class="card">
+                    <h3>Real-Time Analytics</h3>
+                    <p>Access actionable insights instantly with our real-time analytics, empowering you to respond quickly to changes.</p>
+                </div>
+            </div>
+            <!-- END: Three Cards -->
+
+        </div>
+    </section>
+
+
+    <section id="services" class="services-section">
+    <h2>Services</h2>
+
+            <div class="services-container">
+
+                <div class="service-card">
+                    <h3>AI/ML-driven</h3>
+                    <p>AI/ML-driven product innovation and predictive analytics</p>
+                </div>
+
+                <div class="service-card">
+                    <h3>Software reliability </h3>
+                    <p>Software reliability analysis, testing, and lifecycle strategy</p>
+                </div>
+
+                <div class="service-card">
+                    <h3>Artificial Cutting-Edge Intelligence </h3>
+                    <p>Artificial Cutting-Edge Intelligence for hardware and accelerated life testing</p>
+                </div>
+
+                <div class="service-card">
+                    <h3>Food product development </h3>
+                    <p>Food product development with regulatory and quality compliance</p>
+                </div>
+
+                <div class="service-card">
+                    <h3>Smart compliance engineering </h3>
+                    <p>Smart compliance engineering and global standards alignment</p>
+                </div>
+
+                <div class="service-card">
+                    <h3>End-to-end reliability </h3>
+                    <p>End-to-end reliability engineering and system optimization</p>
+                </div>
+
+                <div class="service-card">
+                    <h3>Technical consulting </h3>
+                    <p>Technical consulting across R&D, QA, and product management</p>
+                </div>
+
+            </div>
+    </section>
+  <!-- product Section -->
+<section id="products" class="products-section">
+    <h2>Products</h2>
+
+    <div class="products-container">
+
+        <a class="product-card" href="pages/ept.html">
+            <h3>Essential Performance Tool (EPT)</h3>
+            <p>Essential Performance Tool (EPT)</p>
+        </a>
+
+        <a class="product-card" href="pages/acei.html">
+            <h3>Artificial Cutting-Edge Intelligence (ACEI)</h3>
+            <p>Artificial Cutting-Edge Intelligence (ACEI)</p>
+        </a>
+
+        <a class="product-card" href="pages/ai-modulated.html">
+            <h3>AI with Modulated Technology</h3>
+            <p>AI with Modulated Technology</p>
+        </a>
+
+        <a class="product-card" href="pages/msd.html">
+            <h3>Mirror Section Drive (MSD)</h3>
+            <p>Mirror Section Drive (MSD)</p>
+        </a>
+
+    </div>
+</section>
+
+<section class="testimonials-section">
+    <h1 class="testimonials-title">What Our Clients Say</h1>
+    <p class="testimonials-subtitle">Real feedback from our customers</p>
+
+    <div class="Carousel">
+        <!-- MAIN GROUP -->
+        <div class="group">
+            <div class="Carousel-card glass">
+                <h3 class="name">Amit Kumar</h3>
+                <p class="text">Amazing experience! Great support and professional service.</p>
+            </div>
+
+            <div class="Carousel-card glass">
+                <h3 class="name">Rohit Sharma</h3>
+                <p class="text">Very smooth process and excellent results.</p>
+            </div>
+
+            <div class="Carousel-card glass">
+                <h3 class="name">Priya Reddy</h3>
+                <p class="text">Very helpful team and impressive work!</p>
+            </div>
+
+            <div class="Carousel-card glass">
+                <h3 class="name">Kiran Kumar</h3>
+                <p class="text">Great experience — definitely recommend.</p>
+            </div>
+
+            <div class="Carousel-card glass">
+                <h3 class="name">Anjali Mehta</h3>
+                <p class="text">Professional, fast, and reliable.</p>
+            </div>
+
+            <div class="Carousel-card glass">
+                <h3 class="name">Suresh Yadav</h3>
+                <p class="text">Quality work delivered on time!</p>
+            </div>
+        </div>
+
+        <!-- Duplicate group removed. JavaScript will clone the main group at runtime for infinite scroll -->
+    </div>
+</section>
+<!-- blogs -->
+<section class="blogs-section" id="blogs">
+    <h1 class="blogs-title">Latest Blogs</h1>
+    <p class="blogs-subtitle">Insights, technology trends, and industry updates</p>
+
+    <div class="blogs-container">
+
+        <div class="blog-card glass-blog">
+            <h3 class="blog-heading">AI Transforming Modern Businesses</h3>
+            <p class="blog-text">
+                Discover how artificial intelligence is reshaping automation, decision-making, 
+                and customer engagement across industries.
+            </p>
+            <a class="blog-link">Read More →</a>
+        </div>
+
+        <div class="blog-card glass-blog">
+            <h3 class="blog-heading">The Future of Machine Learning</h3>
+            <p class="blog-text">
+                Machine learning models are evolving fast! Here’s what the next decade of 
+                innovation looks like.
+            </p>
+            <a class="blog-link">Read More →</a>
+        </div>
+
+        <div class="blog-card glass-blog">
+            <h3 class="blog-heading">Real-Time Analytics for Growth</h3>
+            <p class="blog-text">
+                Real-time data helps companies scale quickly. Learn how analytics boosts 
+                performance and efficiency.
+            </p>
+            <a class="blog-link">Read More →</a>
+        </div>
+
+    </div>
+</section>
+
+<!-- footer -->
+<footer class="footer">
+    <div class="footer-container">
+
+        <div class="footer-section">
+            <h3>Contact Us</h3>
+            <p><strong>Email:</strong>contact@duurvextech.com</p>
+        </div>
+
+        <div class="footer-section">
+            <h3>Quick Links</h3>
+            <a href="#home">Home</a>
+            <a href="#services">Services</a>
+            <a href="#products">Products</a>
+            <a href="#contact">Contact</a>
+        </div>
+
+        <div class="footer-section">
+            <h3>Stay Connected</h3>
+            <p>Follow us on social platforms</p>
+
+
+    <div class="social-icons">
+
+        <!-- Instagram -->
+        <a class="icon instagram" href="javascript:void(0)">
+            <svg width="28" height="28" viewBox="0 0 24 24">
+                <defs>
+                    <linearGradient id="instaGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" stop-color="#f58529"/>
+                        <stop offset="30%" stop-color="#dd2a7b"/>
+                        <stop offset="60%" stop-color="#8134af"/>
+                        <stop offset="100%" stop-color="#515bd4"/>
+                    </linearGradient>
+                </defs>
+                <path fill="url(#instaGrad)" d="M7 2C4.243 2 2 4.243 2 7v10c0 
+                2.757 2.243 5 5 5h10c2.757 0 5-2.243 
+                5-5V7c0-2.757-2.243-5-5-5H7zm10 
+                2c1.654 0 3 1.346 3 3v10c0 
+                1.654-1.346 3-3 3H7c-1.654 0-3-1.346-3-3V7c0-1.654 
+                1.346-3 3-3h10zm-5 3a5 5 0 100 
+                10 5 5 0 000-10zm0 2a3 3 0 110 
+                6 3 3 0 010-6zm4.5-.75a1.25 1.25 
+                0 11-2.5 0 1.25 1.25 
+                0 012.5 0z"/>
+            </svg>
+        </a>
+
+        <!-- Twitter -->
+        <a class="icon twitter" href="javascript:void(0)">
+            <svg class="icon-svg" width="28" height="28" viewBox="0 0 24 24">
+                <path d="M18.244 2H21l-6.51 
+                7.44L22 22h-7.078l-4.41-6.364L5.377 
+                22H2.622l6.937-7.927L2 2h7.2l4.02 
+                5.817L18.244 2zm-2.486 
+                17.326h1.955L8.34 
+                4.59H6.27l9.488 14.736z"/>
+            </svg>
+        </a>
+
+        <!-- LinkedIn -->
+        <a class="icon linkedin" href="javascript:void(0)">
+            <svg class="icon-svg" width="28" height="28" viewBox="0 0 24 24">
+                <path d="M19 3A2.993 2.993 0 0122 
+                6v12a2.993 2.993 0 01-3 
+                3H5a2.993 2.993 0 01-3-3V6a2.993 
+                2.993 0 013-3h14zm-9 
+                14v-7H7v7h3zm-1.5-8.2c1.01 
+                0 1.5-.67 1.5-1.5S9.51 5.8 
+                8.5 5.8 7 6.47 7 7.3s.49 
+                1.5 1.5 1.5zM17 17v-3.6c0-1.93-2-1.78-2 
+                0V17h-3v-7h3v1.05c1.396-2.586 
+                6-2.777 6 2.476V17h-4z"/>
+            </svg>
+        </a>
+
+    </div>
+</div>
+
+        </div>
+
+    </div>
+
+    <p class="footer-bottom">© Duurvextech 2025 All rights reserved.</p>
+</footer>
+
+    <script>
+        function toggleMenu() {
+            document.getElementById("navLinks").classList.toggle("show");
+        }
+
+        // Clone the testimonial group at runtime to enable infinite scrolling
+        document.addEventListener('DOMContentLoaded', function() {
+            const carousel = document.querySelector('.Carousel');
+            const firstGroup = carousel && carousel.querySelector('.group');
+            if (carousel && firstGroup) {
+                // If there's only one group, clone it to create the continuous scroll
+                const groups = carousel.querySelectorAll('.group');
+                if (groups.length < 2) {
+                    const clone = firstGroup.cloneNode(true);
+                    clone.setAttribute('aria-hidden', 'true');
+                    carousel.appendChild(clone);
+                }
+            }
+        });
+    </script>
+</body>
+</html>
