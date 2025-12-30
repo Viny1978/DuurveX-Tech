@@ -159,6 +159,7 @@ html {
 @media (max-width: 1024px) {
     .navbar {
         padding: 0 20px;
+        
     }
     .nav-links {
         gap: 20px;
@@ -254,6 +255,7 @@ html {
     .navbar {
         height: 120px; /* compact navbar on small phones */
         padding: 8px 12px;
+        padding-top: 130px; /* space for fixed navbar */
     }
     /* push logo image down slightly on very small screens */
     .logo img {
