@@ -35,6 +35,17 @@ body {
     filter: brightness(0) invert(1) contrast(130%);
     margin-top: -22px; /* increase overlap so navbar is visually shorter */
 }
+.home img {
+    width: 126px;
+    height: 96px;
+    border-radius: 8px;
+    padding-top: 10px;
+    filter: brightness(0) invert(1) contrast(130%);
+    margin-top: -22px; /* increase overlap so navbar is visually shorter */
+    align-items: center;
+    object-fit: cover;
+    flex-shrink: 0;
+}
 
 .logo-text {
     color: #ffffff;
@@ -76,7 +87,7 @@ body {
     /* Use a lighter skyblue that scales well on mobile */
     color: white;
     text-align: center;
-    padding-top: 80px; /* space for fixed navbar */
+    padding-top: 130px; /* space for fixed navbar */
     background-position: center;
     background-size: cover;
     background: #0d0d0d;
@@ -250,6 +261,11 @@ html {
         max-height: 84px;
         width: 96px;
     }
+  .home img {
+        margin-top: 120px;
+        max-height: 84px;
+        width: 96px;
+    }
     .btn {
         font-size: 14px;
         padding: 10px 15px;
@@ -267,7 +283,7 @@ html {
 
 .services-section h2 {
     font-size: 36px;
-    color: #2A7B9B;
+    color: white;
     margin-bottom: 40px;
 }
 
@@ -293,18 +309,19 @@ html {
 .service-card:hover {
     transform: translateY(-8px);
     box-shadow: 0px 8px 25px rgba(0,0,0,0.25);
+    
 }
 
 .service-card h3 {
     font-size: 20px;
-    color: #2A7B9B;
+     color: white;
     margin-bottom: 10px;
 }
 
 .service-card p {
     font-size: 15px;
     line-height: 1.5;
-    color: #444;
+    color: white;
 }
 
 /* -------------------------------
@@ -348,7 +365,7 @@ html {
 
 .products-section h2 {
     font-size: 36px;
-    color: #2A7B9B;
+    color: white;
     margin-bottom: 40px;
 }
 
@@ -363,7 +380,7 @@ html {
 
 /* Product Cards */
 .product-card {
-    background: #ffffff;
+    background: rgb(4, 4, 4);
     width: 280px;
     padding: 25px;
     border-radius: 12px;
@@ -373,9 +390,12 @@ html {
 }
 
 .product-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0px 8px 25px rgba(0,0,0,0.25);
+    background: rgba(0, 102, 204, 0.15);
+    border-color: #7ad9ff;
+    box-shadow: 0 4px 16px rgba(0, 102, 204, 0.2);
+    transform: translateY(-4px);
 }
+
 
 /* Remove default underline for product links and preserve card styling */
 .product-card,
@@ -390,14 +410,14 @@ html {
 /* Title & Text */
 .product-card h3 {
     font-size: 20px;
-    color: #2A7B9B;
+    color: white;
     margin-bottom: 10px;
 }
 
 .product-card p {
     font-size: 15px;
     line-height: 1.5;
-    color: #444;
+    color: white;
 }
 
 /* -------------------------------
