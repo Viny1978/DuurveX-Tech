@@ -182,7 +182,6 @@ html {
     }
 
     .navbar {
-        height: 120px; /* smaller navbar on narrow screens */
         padding: 8px 12px;
     }
 
@@ -253,7 +252,6 @@ html {
         font-size: 14px;
     }
     .navbar {
-        height: 120px; /* compact navbar on small phones */
         padding: 8px 12px;
     }
     /* push logo image down slightly on very small screens */
