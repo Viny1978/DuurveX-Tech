@@ -169,6 +169,9 @@ a:hover {
     padding: 24px;
     transition: all 0.3s ease;
 }
+.card a {
+    text-decoration: none;
+}
 
 .card:hover {
     background: rgba(0, 102, 204, 0.15);
