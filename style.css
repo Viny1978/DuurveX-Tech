@@ -245,6 +245,11 @@ html {
 
 /* Small Mobile */
 @media (max-width: 480px) {
+    .home{
+       
+    margin-top: 0;
+    padding-top: 0;
+    }
     .home-content h1 {
         font-size: 28px;
     }
