@@ -80,17 +80,25 @@ body {
 .home {
     width: 100%;
     /* subtract fixed navbar height so background fits exactly beneath it */
-    min-height: calc(100vh);
     display: flex;
     align-items: center;
     justify-content: center;
     /* Use a lighter skyblue that scales well on mobile */
     color: white;
     text-align: center;
-    padding-top: 130px; /* space for fixed navbar */
     background-position: center;
     background-size: cover;
     background: #0d0d0d;
+     /* padding-top: 130px; */
+    min-height: calc(100vh - 130px); /* full viewport height minus navbar */
+}
+.scrolling {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Use a lighter skyblue that scales well on mobile */
+    text-align: center;
+    padding-top: 130px; /* space for fixed navbar */
 }
 
 .home-content h1 {
@@ -170,6 +178,7 @@ html {
     .home-content p {
         font-size: 18px;
     }
+    
 }
 
 /* Mobile */
@@ -742,66 +751,38 @@ html {
     }
 }
 
-/* ---------------- Horizontal Scrolling ---------------- */
+/* -------- Horizontal Scrolling (Fixed Alignment) -------- */
 .scroll-container {
     width: 100%;
     background: #0d0d0d;
     overflow: hidden;
-    padding: 50px 0;
 }
 
-.scroll-text {
+.scroll-track {
+    display: flex;
+    width: max-content;
+    animation: marquee 18s linear infinite;
+    padding: 12px 0;
+}
+
+.scroll-track span {
     color: #0b35dd;
     font-size: clamp(14px, 3vw, 22px);
     white-space: nowrap;
-    display: inline-block;
-    padding-left: 100%;
-    animation: scroll-left 15s linear infinite;
 }
 
-@keyframes scroll-left {
+/* Smooth infinite scroll */
+@keyframes marquee {
     from {
-        transform: translateX(0);
+        transform: translateX(100%);
     }
     to {
         transform: translateX(-100%);
     }
 }
 
-/* ---------------- Vertical Scrolling ---------------- */
-.vertical-container {
-    width: min(90%, 320px);
-    height: 180px;
-    margin: 40px auto;
-    background: #222;
-    color: #fff;
-    overflow: hidden;
-    border-radius: 10px;
-    text-align: center;
-    padding: 10px;
-}
-
-.vertical-text {
-    animation: scroll-up 8s linear infinite;
-}
-
-.vertical-text p {
-    margin: 20px 0;
-    font-size: clamp(14px, 2.5vw, 18px);
-}
-
-/* Vertical animation */
-@keyframes scroll-up {
-    from {
-        transform: translateY(100%);
-    }
-    to {
-        transform: translateY(-100%);
-    }
-}
-
-/* Pause animation on hover (desktop) */
-.scroll-text:hover,
-.vertical-text:hover {
+/* Pause on hover */
+.scroll-container:hover .scroll-track {
     animation-play-state: paused;
 }
+
