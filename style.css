@@ -243,38 +243,7 @@ html {
     }
 }
 
-/* Small Mobile */
-@media (max-width: 480px) {
-    .home{
-       
-    margin-top: 0;
-    padding-top: 0;
-    }
-    .home-content h1 {
-        font-size: 28px;
-    }
-    .home-content p {
-        font-size: 14px;
-    }
-    .navbar {
-        padding: 8px 12px;
-    }
-    /* push logo image down slightly on very small screens */
-    .logo img {
-        margin-top: 6px;
-        max-height: 84px;
-        width: 96px;
-    }
-  .home img {
-        margin-top: 120px;
-        max-height: 84px;
-        width: 96px;
-    }
-    .btn {
-        font-size: 14px;
-        padding: 10px 15px;
-    }
-}
+
 /* -------------------------------
    SERVICES SECTION
 ----------------------------------*/
