@@ -1,0 +1,261 @@
+/* common.css - Shared product page styles (navbar, header, cards, responsive rules) */
+
+/* Dark theme for product pages */
+body {
+    background: #000000;
+    color: #ffffff;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    padding-top: 72px; /* reserve space for the fixed navbar */
+}
+
+/* Navbar: background + layout */
+.navbar {
+    background: #000000;
+    border-bottom: 1px solid #222222;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 4px 12px; /* reduced to decrease navbar height */
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+
+.nav-left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+}
+
+.nav-logo {
+    width: 126px;
+    height: 96px;
+    object-fit: cover;
+    border-radius: 8px;
+    display: block;
+    flex-shrink: 0;
+    padding-top: 10px;
+    /* Make dark logos appear white on the black navbar */
+    filter: brightness(0) invert(1) contrast(120%);
+    margin-top: -22px; /* increase overlap so navbar is visually shorter */
+}
+
+.nav-name {
+    color: #ffffff;
+    font-size: 14px;
+    line-height: 1.1;
+    margin-top: 6px;
+    font-weight: 600;
+    letter-spacing: 0.2px;
+}
+
+@media (max-width: 480px) {
+    .nav-logo {
+        width: 96px;
+        height: 96px;
+        margin-top: -8px;
+    }
+    .nav-name {
+        font-size: 12px;
+    }
+}
+
+.nav-links li a {
+    color: #ffffff;
+}
+
+.nav-links li a:hover {
+    color: #7ad9ff;
+}
+
+/* Page Header / Hero */
+.page-header {
+    padding: 60px 20px 30px 20px;
+    text-align: center;
+    background: linear-gradient(135deg, #1a1a1a 0%, #0a0a0a 100%);
+    border-bottom: 2px solid #0066cc;
+    color: #ffffff;
+}
+
+.page-header h1 {
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 12px;
+    color: #ffffff;
+}
+
+.page-header p {
+    font-size: 18px;
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+/* Page Container */
+.page-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px 24px;
+    background: transparent;
+    color: #ffffff;
+}
+
+.page-container h2 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-top: 36px;
+    margin-bottom: 18px;
+    color: #ffffff;
+    border-bottom: 2px solid #0066cc;
+    padding-bottom: 12px;
+}
+
+.page-container h3 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-top: 28px;
+    margin-bottom: 14px;
+    color: #ffffff;
+}
+
+.page-container p {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #ffffff;
+    margin-bottom: 18px;
+}
+
+.page-container ul {
+    margin-left: 24px;
+    margin-bottom: 24px;
+}
+
+.page-container li {
+    font-size: 16px;
+    color: #ffffff;
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+/* Links */
+a {
+    color: #7ad9ff;
+    text-decoration: underline;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #4ec1ff;
+}
+
+/* Cards Section */
+.cards-section {
+    display: flex;
+    gap: 24px;
+    margin: 40px 0;
+    flex-wrap: wrap;
+}
+
+.card {
+    flex: 1;
+    min-width: 280px;
+    background: rgba(0, 102, 204, 0.05);
+    border: 1px solid #0066cc;
+    border-radius: 8px;
+    padding: 24px;
+    transition: all 0.3s ease;
+}
+.card a {
+    text-decoration: none;
+}
+
+.card:hover {
+    background: rgba(0, 102, 204, 0.15);
+    border-color: #7ad9ff;
+    box-shadow: 0 4px 16px rgba(0, 102, 204, 0.2);
+    transform: translateY(-4px);
+}
+
+.card h4 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 12px;
+}
+
+.card p {
+    color: #ffffff;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+/* Footer */
+.footer {
+    background: #0a0a0a;
+    border-top: 1px solid #222222;
+}
+
+.footer-section a {
+    color: #7ad9ff;
+}
+
+.footer-section a:hover {
+    color: #4ec1ff;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .page-header {
+        padding: 48px 16px 24px 16px;
+    }
+
+    .page-header h1 {
+        font-size: 36px;
+    }
+
+    .page-container {
+        padding: 32px 16px;
+    }
+
+    .page-container h2 {
+        font-size: 26px;
+    }
+
+    .page-container h3 {
+        font-size: 20px;
+    }
+
+    .page-container p {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .page-header {
+        padding: 36px 12px 20px 12px;
+    }
+    .page-header h1 {
+        font-size: 28px;
+    }
+
+    .page-container {
+        padding: 24px 12px;
+    }
+
+    .page-container h2 {
+        font-size: 22px;
+    }
+
+    .page-container h3 {
+        font-size: 18px;
+    }
+
+    .page-container p,
+    .page-container li {
+        font-size: 14px;
+    }
+}

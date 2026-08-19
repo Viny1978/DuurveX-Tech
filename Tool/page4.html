@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Input Values</title>
+<style>
+body{font-family:Arial;background:black;color:#32ffd3;height:100vh;margin:0;display:flex;justify-content:center;align-items:center}
+.block{background:#0d0d0d;padding:35px;width:450px;border-radius:14px;border:3px solid #32ffd3;box-shadow:0 0 18px #32ffd3;text-align:center}
+input,.btn{width:100%;padding:15px;margin-top:12px;font-size:17px;background:black;color:#32ffd3;border:3px solid #32ffd3;border-radius:8px;box-sizing:border-box}
+.btn:hover{background:#32ffd3;color:black}
+</style>
+</head>
+<body>
+<div class="block">
+<h2 id="title"></h2>
+<div id="inputs"></div>
+<button class="btn" onclick="location.href='page1.html'">Home</button>
+<button class="btn" onclick="history.back()">Back</button>
+<button class="btn" onclick="calc()">Result</button>
+</div>
+<script>
+const type=localStorage.getItem("type");
+const inputs=document.getElementById("inputs");
+const title=document.getElementById("title");
+
+if(type==="Radiated Emission"){
+title.innerText="Radiated Emission Inputs";
+inputs.innerHTML=`
+<input id="vant" placeholder="Vant (dBµV)">
+<input id="af" placeholder="AF (dB/m)">
+<input id="cf" placeholder="CF (dB)">
+<input id="ag" placeholder="AG (dB)">
+<input id="d" placeholder="Distance d (m)">`;
+}
+if(type==="Discharge Energy"){
+title.innerText="ESD Discharge Energy Inputs";
+inputs.innerHTML=`
+<input id="c" placeholder="Capacitance C (e.g., 150pF or 150×10^-12)">
+<input id="v" placeholder="Voltage V (Volts)">`;
+}
+if(type==="Initial Risk"){
+title.innerText="Initial Risk Inputs";
+inputs.innerHTML=`
+<input id="pi" placeholder="Probability Pi (e.g., 0.01)">
+<input id="si" placeholder="Severity Si (1-5)">`;
+}
+
+function parseC(val){
+val=val.replace("×10^-12","e-12").replace("pF","e-12");
+return parseFloat(val);
+}
+
+function calc(){
+let res=0;
+if(type==="Radiated Emission"){
+res=(+vant.value + +af.value + +cf.value - +ag.value)/ +d.value;
+}
+if(type==="Discharge Energy"){
+const C=parseC(c.value);
+const V=+v.value;
+res=0.5*C*V*V;
+}
+if(type==="Initial Risk"){
+res=+pi.value * +si.value;
+}
+localStorage.setItem("result",res.toFixed(4));
+location.href="page5.html";
+}
+</script>
+</body>
+</html>

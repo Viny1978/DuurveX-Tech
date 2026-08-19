@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login Attempts - Admin</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .admin-wrap {
+            max-width: 900px;
+            margin: 140px auto 60px;
+            padding: 0 20px;
+            font-family: Arial, sans-serif;
+        }
+        .admin-wrap h1 {
+            margin-bottom: 8px;
+        }
+        .admin-wrap p.note {
+            color: #666;
+            margin-bottom: 24px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: #fff;
+        }
+        th, td {
+            text-align: left;
+            padding: 10px 12px;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background: #111;
+            color: #fff;
+        }
+        tr:nth-child(even) {
+            background: #f7f7f7;
+        }
+        .actions {
+            margin: 20px 0;
+        }
+        .actions button {
+            padding: 8px 16px;
+            margin-right: 10px;
+            cursor: pointer;
+            border: none;
+            border-radius: 4px;
+        }
+        #exportBtn { background: #222; color: #fff; }
+        #clearBtn { background: #b02a2a; color: #fff; }
+        #empty-msg { color: #888; margin-top: 20px; }
+    </style>
+</head>
+<body class="standalone-page">
+    <div class="logo">
+        <img src="image/logo.png" alt="Company Logo">
+        <p class="logo-text">Powered By Essential Performance LLC</p>
+    </div>
+
+    <div class="admin-wrap">
+        <h1>Login Attempts</h1>
+        <p class="note">Entries submitted through login.html on this browser/device only.</p>
+
+        <div class="actions">
+            <button id="exportBtn">Export as CSV</button>
+            <button id="clearBtn">Clear All</button>
+        </div>
+
+        <table id="attemptsTable">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Timestamp</th>
+                </tr>
+            </thead>
+            <tbody id="attemptsBody"></tbody>
+        </table>
+        <p id="empty-msg" style="display:none;">No login attempts recorded yet.</p>
+    </div>
+
+    <a href="index.html" class="link">
+        <- Back to Home
+    </a>
+
+    <script>
+        const STORAGE_KEY = "duurvex_login_attempts";
+
+        function getAttempts() {
+            try {
+                return JSON.parse(localStorage.getItem(STORAGE_KEY)) || [];
+            } catch (e) {
+                return [];
+            }
+        }
+
+        function render() {
+            const attempts = getAttempts();
+            const body = document.getElementById("attemptsBody");
+            const emptyMsg = document.getElementById("empty-msg");
+            body.innerHTML = "";
+
+            if (attempts.length === 0) {
+                emptyMsg.style.display = "block";
+                return;
+            }
+            emptyMsg.style.display = "none";
+
+            attempts.slice().reverse().forEach((a, i) => {
+                const row = document.createElement("tr");
+                const num = attempts.length - i;
+                row.innerHTML = `
+                    <td>${num}</td>
+                    <td>${escapeHtml(a.name)}</td>
+                    <td>${escapeHtml(a.email)}</td>
+                    <td>${escapeHtml(a.timestamp)}</td>
+                `;
+                body.appendChild(row);
+            });
+        }
+
+        function escapeHtml(str) {
+            const div = document.createElement("div");
+            div.textContent = str ?? "";
+            return div.innerHTML;
+        }
+
+        document.getElementById("clearBtn").addEventListener("click", () => {
+            if (confirm("Clear all recorded login attempts?")) {
+                localStorage.removeItem(STORAGE_KEY);
+                render();
+            }
+        });
+
+        document.getElementById("exportBtn").addEventListener("click", () => {
+            const attempts = getAttempts();
+            if (attempts.length === 0) {
+                alert("Nothing to export.");
+                return;
+            }
+            let csv = "Name,Email,Timestamp\n";
+            attempts.forEach(a => {
+                csv += `"${(a.name || "").replace(/"/g, '""')}","${(a.email || "").replace(/"/g, '""')}","${a.timestamp}"\n`;
+            });
+            const blob = new Blob([csv], { type: "text/csv" });
+            const url = URL.createObjectURL(blob);
+            const link = document.createElement("a");
+            link.href = url;
+            link.download = "login_attempts.csv";
+            link.click();
+            URL.revokeObjectURL(url);
+        });
+
+        render();
+    </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Essential Performance Tool</title>
+<style>
+body{font-family:Arial;background:black;color:#32ffd3;height:100vh;margin:0;display:flex;justify-content:center;align-items:center}
+.block{background:#0d0d0d;padding:40px;width:450px;border-radius:14px;border:3px solid #32ffd3;box-shadow:0 0 18px #32ffd3;text-align:center}
+select,.btn{width:100%;padding:15px;margin-top:15px;font-size:18px;background:black;color:#32ffd3;border:3px solid #32ffd3;border-radius:8px;box-shadow:0 0 14px #32ffd3}
+.btn:hover{background:#32ffd3;color:black}
+</style>
+</head>
+<body>
+<div class="block">
+<h2>Select Standard</h2>
+<select id="standard">
+<option value="">-- Select Standard --</option>
+<option>IEC 60601-1-2</option>
+<option>IEC 61000-4-2</option>
+<option>ISO 14971</option>
+</select>
+<button class="btn" onclick="next()">Next</button>
+</div>
+<script>
+function next(){
+localStorage.setItem("standard",standard.value);
+location.href="page2.html";
+}
+</script>
+</body>
+</html>

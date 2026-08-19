@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>LOGIN PAGE</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="standalone-page">
+    <div class="logo">
+            <img src="image/logo.png" alt="Company Logo">
+            <p class="logo-text">Powered By Essential Performance LLC</p>
+        </div>
+<form class="login-form">
+    <h2>Podcast Log In</h2>
+     <label for="name">Name:</label>
+     <input type="text" id="name">
+     <br>
+     <br>
+     <label for="email">Email:</label>
+     <input type="email" id="email">
+     <br>
+     <br>
+     <button type="button" onclick="verify()">Login</button>
+</form>
+<script>
+    function verify(){
+    let username = document.getElementById("name").value.trim();
+    let email = document.getElementById("email").value.trim();
+
+    // Log every attempt (successful or not) to localStorage
+    logAttempt(username, email);
+
+    if (username !== "" && email !== ""){
+       window.location.href="podcasts.html"
+    }
+    else{
+        alert("Please enter both a name and an email")
+    }
+    }
+
+    function logAttempt(username, email){
+        const STORAGE_KEY = "duurvex_login_attempts";
+        let attempts = [];
+        try {
+            attempts = JSON.parse(localStorage.getItem(STORAGE_KEY)) || [];
+        } catch (e) {
+            attempts = [];
+        }
+        attempts.push({
+            name: username,
+            email: email,
+            timestamp: new Date().toISOString()
+        });
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(attempts));
+    }
+</script>
+<a href="index.html" class="link">
+    <- Back to Home
+</a>
+</body>

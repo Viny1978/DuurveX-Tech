@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Select Type</title>
+<style>
+body{font-family:Arial;background:black;color:#32ffd3;height:100vh;margin:0;display:flex;justify-content:center;align-items:center}
+.block{background:#0d0d0d;padding:40px;width:450px;border-radius:14px;border:3px solid #32ffd3;box-shadow:0 0 18px #32ffd3;text-align:center}
+select,.btn{width:100%;padding:15px;margin-top:15px;font-size:18px;background:black;color:#32ffd3;border:3px solid #32ffd3;border-radius:8px}
+.btn:hover{background:#32ffd3;color:black}
+</style>
+</head>
+<body>
+<div class="block">
+<h2>Select Type</h2>
+<select id="type"></select>
+<button class="btn" onclick="location.href='page1.html'">Home</button>
+<button class="btn" onclick="history.back()">Back</button>
+<button class="btn" onclick="next()">Next</button>
+</div>
+<script>
+const cat=localStorage.getItem("category");
+const typeSel=document.getElementById("type");
+typeSel.innerHTML='<option value="">-- Select Type --</option>';
+
+if(cat==="EMC") typeSel.innerHTML+=`<option>Radiated Emission</option>`;
+if(cat==="ESD") typeSel.innerHTML+=`<option>Discharge Energy</option>`;
+if(cat==="Medical Device Risk Management") typeSel.innerHTML+=`<option>Initial Risk</option>`;
+
+function next(){
+localStorage.setItem("type",typeSel.value);
+location.href="page4.html";
+}
+</script>
+</body>
+</html>
