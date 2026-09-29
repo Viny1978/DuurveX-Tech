@@ -100,7 +100,9 @@ body {
     text-align: center;
     padding-top: 130px; /* space for fixed navbar */
 }
-
+.admin{
+    color: #2A7B9B;
+}
 .home-content h1 {
     font-size: 60px;
     font-weight: 700;
@@ -734,7 +736,7 @@ html {
 }
 
 .scroll-text {
-    color: #fff;
+    color: #2A7B9B;
     font-size: clamp(14px, 3vw, 22px);
     white-space: nowrap;
     display: inline-block;
@@ -757,7 +759,6 @@ html {
     background: #0d0d0d;
     overflow: hidden;
 }
-
 .scroll-track {
     display: flex;
     width: max-content;
@@ -766,7 +767,7 @@ html {
 }
 
 .scroll-track span {
-    color: #0b35dd;
+    color: #2A7B9B;
     font-size: clamp(14px, 3vw, 22px);
     white-space: nowrap;
 }
@@ -806,7 +807,7 @@ html {
     width: 250px;
     margin: 0 auto;
 
-    background: rgba(181, 151, 172, 0.2);
+    
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
 
