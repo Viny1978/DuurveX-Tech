@@ -326,6 +326,23 @@ section.block .wrap{padding-block:96px}
 @keyframes soonFlow{to{background-position:300% 0}}
 @media (prefers-reduced-motion: reduce){.soon-badge,.soon-badge::after,.soon-dot,.soon-text,.soon-pop{animation:none}.soon-badge::after{display:none}.soon-text{color:#FFB25C;background:none}}
 
+
+/* Mobile menu */
+.nav-right{display:flex;align-items:center;gap:12px}
+.menu-btn{display:none;width:44px;height:44px;border-radius:12px;border:1px solid var(--line);background:var(--glass);cursor:pointer;flex-direction:column;justify-content:center;align-items:center;gap:5px;padding:0}
+.menu-btn span{display:block;width:20px;height:2px;border-radius:2px;background:var(--fg);transition:transform .2s ease,opacity .2s ease}
+.menu-btn[aria-expanded="true"] span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.menu-btn[aria-expanded="true"] span:nth-child(2){opacity:0}
+.menu-btn[aria-expanded="true"] span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+.mobile-menu{border-top:1px solid var(--line);background:rgba(8,17,29,.97)}
+.mobile-menu .wrap{display:flex;flex-direction:column;padding-block:8px 16px}
+.mobile-menu a{padding:14px 4px;font-size:18px;font-weight:600;color:var(--fg);text-decoration:none;border-bottom:1px solid var(--line)}
+.mobile-menu a:last-child{border-bottom:0;color:var(--accent)}
+.mobile-menu a:hover{color:var(--accent)}
+@media (max-width:1080px){.menu-btn{display:flex}}
+@media (min-width:1081px){.mobile-menu{display:none!important}}
+@media (max-width:560px){.nav-right .btn-primary{display:none}.brand small{display:none}}
+
 /* Testimonials */
 .quotes{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
 .quote{margin:0;background:var(--glass);border:1px solid var(--line);border-radius:18px;padding:26px;display:flex;flex-direction:column;gap:18px}
@@ -400,8 +417,16 @@ section.block .wrap{padding-block:96px}
       <li><a href="#feedback">Feedback</a></li>
       <li><a href="#blog">Blog</a></li>
     </ul>
-    <a class="btn btn-primary" href="#contact">Contact</a>
+    <div class="nav-right">
+      <a class="btn btn-primary" href="#contact">Contact</a>
+      <button class="menu-btn" id="menuBtn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu"><span></span><span></span><span></span></button>
+    </div>
   </div>
+  <nav class="mobile-menu" id="mobileMenu" aria-label="Site menu" hidden>
+    <div class="wrap">
+      <a href="#home">Home</a><a href="#services">Services</a><a href="#products">Products</a><a href="#apps">Apps</a><a href="#podcast">Podcast</a><a href="#testimonials">Clients</a><a href="#feedback">Feedback</a><a href="#blog">Blog</a><a href="#contact">Contact</a>
+    </div>
+  </nav>
 </header>
 
 <main id="home">
@@ -879,6 +904,12 @@ section.block .wrap{padding-block:96px}
   });
 
 
+
+
+  /* Mobile menu */
+  var mb=document.getElementById('menuBtn'),mm=document.getElementById('mobileMenu');
+  mb.addEventListener('click',function(){var open=mm.hidden;mm.hidden=!open;mb.setAttribute('aria-expanded',open);mb.setAttribute('aria-label',open?'Close menu':'Open menu')});
+  mm.addEventListener('click',function(e){if(e.target.tagName==='A'){mm.hidden=true;mb.setAttribute('aria-expanded','false');mb.setAttribute('aria-label','Open menu')}});
 
   /* Social media links: paste each profile URL between the quotes. Icons without a URL stay visible but do nothing when clicked. */
   var SOCIAL={
