@@ -14,6 +14,20 @@
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>EPT Reliability Suite by DuurveX-Tech</title>
 <meta name="description" content="EPT Reliability Suite: reliability analysis for software, hardware, telemetry, CAN bus, accelerated stress and clinical needs, brought together in one 8D. Start a free 30-day trial.">
+<link rel="canonical" href="https://www.duurvextech.com/ept-reliability-suite/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="DuurveX-Tech">
+<meta property="og:url" content="https://www.duurvextech.com/ept-reliability-suite/">
+<meta property="og:title" content="EPT Reliability Suite by DuurveX-Tech">
+<meta property="og:description" content="Reliability analysis for software, hardware, telemetry, CAN bus, accelerated stress and clinical needs, brought together in one 8D. Free 30-day trial by approval.">
+<meta property="og:image" content="https://www.duurvextech.com/ept-reliability-suite/assets/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="EPT Reliability Suite: reliability decisions, made together">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="EPT Reliability Suite by DuurveX-Tech">
+<meta name="twitter:description" content="Reliability analysis for software, hardware, telemetry, CAN bus, accelerated stress and clinical needs, brought together in one 8D. Free 30-day trial by approval.">
+<meta name="twitter:image" content="https://www.duurvextech.com/ept-reliability-suite/assets/og-image.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,500..800&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
 <link rel="icon" href="assets/app-icon.png">
@@ -163,6 +177,13 @@ summary::-webkit-details-marker{display:none}
 summary::after{content:"+";font:500 18px var(--f-mono);color:var(--teal)}
 details[open] summary::after{content:"–"}
 details p{margin:0 0 16px;color:var(--muted);max-width:70ch}
+/* share */
+.share{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-top:18px}
+.share-label{font:500 12px/1 var(--f-mono);letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-right:4px}
+.sh{display:inline-flex;align-items:center;font:600 13.5px var(--f-body);padding:7px 13px;border-radius:999px;border:1px solid var(--line);background:transparent;color:var(--ink);text-decoration:none;cursor:pointer}
+.sh:hover{border-color:var(--teal);color:var(--teal)}
+.sh.done{border-color:var(--teal);color:var(--teal)}
+footer .share{margin-top:0}
 /* footer */
 footer{border-top:1px solid var(--line);padding-block:32px;font-size:13.5px;color:var(--muted)}
 footer .wrap{display:flex;flex-wrap:wrap;gap:16px 32px;align-items:center;justify-content:space-between}
@@ -228,8 +249,9 @@ footer a{color:var(--muted)}
     <p class="eyebrow">Demo</p>
     <h2 style="margin-top:10px">See one fleet go from fault log to 8D</h2>
     <p class="lead">A four-minute walkthrough of the real tool using its built-in example data: a mobile robot fleet, a robot arm CAN bus, chiller control electronics and clinical sites.</p>
-    <div class="frame"><video id="demoVideo" controls preload="metadata" playsinline poster="assets/demo-poster.jpg"><source src="assets/ept-reliability-suite-demo.mp4" type="video/mp4">Your browser cannot play this video.</video></div>
-    <div class="meta"><span>3 min 58 s</span><span>Captions on screen, no sound needed</span><span>Example data is synthetic</span></div>
+    <div class="frame"><video id="demoVideo" controls controlslist="nodownload noremoteplayback" disablepictureinpicture disableremoteplayback preload="metadata" playsinline poster="assets/demo-poster.jpg" oncontextmenu="return false;"><source src="assets/ept-reliability-suite-demo.mp4" type="video/mp4">Your browser cannot play this video.</video></div>
+    <div class="meta"><span>About 4 minutes</span><span>Captions on screen, no sound needed</span><span>Example data is synthetic</span></div>
+    <div class="share" aria-label="Share this page"><span class="share-label">Share</span><a class="sh" data-net="linkedin" target="_blank" rel="noopener">LinkedIn</a><a class="sh" data-net="x" target="_blank" rel="noopener">X</a><a class="sh" data-net="facebook" target="_blank" rel="noopener">Facebook</a><a class="sh" data-net="whatsapp" target="_blank" rel="noopener">WhatsApp</a><a class="sh" data-net="email">Email</a><button type="button" class="sh" data-net="copy">Copy link</button></div>
   </div>
 </section>
 
@@ -326,6 +348,7 @@ footer a{color:var(--muted)}
 <footer>
   <div class="wrap">
     <div style="display:flex;align-items:center;gap:16px;flex-wrap:wrap"><img class="logo" src="assets/duurvextech-logo.png" alt="DuurveX-Tech"><span>EPT Reliability Suite is a product of DuurveX-Tech, powered by Essential Performance LLC.<br>© 2026 DuurveX-Tech. All rights reserved.</span></div>
+    <div class="share foot" aria-label="Share this page"><span class="share-label">Share</span><a class="sh" data-net="linkedin" target="_blank" rel="noopener">LinkedIn</a><a class="sh" data-net="x" target="_blank" rel="noopener">X</a><a class="sh" data-net="whatsapp" target="_blank" rel="noopener">WhatsApp</a><a class="sh" data-net="email">Email</a><button type="button" class="sh" data-net="copy">Copy link</button></div>
     <nav aria-label="Legal"><a href="licence-agreement.html">Licence agreement</a><a href="terms.html">Terms of Use</a><a href="privacy.html">Privacy Policy</a><a href="https://duurvextech.com">duurvextech.com</a></nav>
   </div>
 </footer>
@@ -354,6 +377,30 @@ const CONFIG = {
     f.hidden = true; const t = document.getElementById('thanks'); t.hidden = false;
     t.scrollIntoView({ behavior: 'smooth', block: 'center' });
   });
+})();
+</script>
+<script>
+(function () {
+  const URL = 'https://www.duurvextech.com/ept-reliability-suite/';
+  const TEXT = 'EPT Reliability Suite by DuurveX-Tech: reliability analysis from test, field, CAN bus, stress and clinical evidence to one 8D.';
+  const u = encodeURIComponent(URL), t = encodeURIComponent(TEXT);
+  const href = {
+    linkedin: 'https://www.linkedin.com/sharing/share-offsite/?url=' + u,
+    x: 'https://twitter.com/intent/tweet?url=' + u + '&text=' + t,
+    facebook: 'https://www.facebook.com/sharer/sharer.php?u=' + u,
+    whatsapp: 'https://wa.me/?text=' + encodeURIComponent(TEXT + ' ' + URL),
+    email: 'mailto:?subject=' + encodeURIComponent('EPT Reliability Suite by DuurveX-Tech') + '&body=' + encodeURIComponent(TEXT + '\n\n' + URL)
+  };
+  document.querySelectorAll('.sh[data-net]').forEach(el => {
+    const n = el.dataset.net;
+    if (href[n]) { el.href = href[n]; return; }
+    el.addEventListener('click', () => {
+      const ok = () => { el.textContent = 'Link copied'; el.classList.add('done'); setTimeout(() => { el.textContent = 'Copy link'; el.classList.remove('done'); }, 2200); };
+      try { navigator.clipboard.writeText(URL).then(ok, () => { window.prompt('Copy this link:', URL); }); } catch (e) { window.prompt('Copy this link:', URL); }
+    });
+  });
+  const v = document.getElementById('demoVideo');
+  if (v) { v.addEventListener('contextmenu', e => e.preventDefault()); v.closest('.frame').addEventListener('contextmenu', e => e.preventDefault()); }
 })();
 </script>
 
