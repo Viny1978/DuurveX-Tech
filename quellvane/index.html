@@ -60,6 +60,7 @@ a{color:var(--teal)}
 img,video{max-width:100%;height:auto;display:block}
 h1,h2,h3{font-family:var(--f-display);text-wrap:balance;margin:0;letter-spacing:-.02em}
 p{margin:0}
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
 .wrap{max-width:1180px;margin:0 auto;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
 .eyebrow{font:600 12px var(--f-mono);letter-spacing:.14em;text-transform:uppercase;color:var(--teal)}
 :focus-visible{outline:2.5px solid var(--mint);outline-offset:3px}
@@ -111,14 +112,21 @@ p{margin:0}
 /* readout */
 .readout{background:var(--deep-2);color:var(--on-deep);border-top:1px solid color-mix(in srgb,var(--on-deep) 10%,transparent)}
 .readout .wrap{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0}
-.readout div{padding:20px 22px;border-left:1px solid color-mix(in srgb,var(--on-deep) 12%,transparent);display:flex;flex-direction:column;gap:4px}
-.readout div:first-child{border-left:0;padding-left:0}
+.readout .wrap > div{padding:20px 22px;border-left:1px solid color-mix(in srgb,var(--on-deep) 12%,transparent);display:flex;flex-direction:column;gap:4px}
+.readout .wrap > div:first-child{border-left:0;padding-left:0}
 .readout small{font:600 11px var(--f-mono);letter-spacing:.1em;text-transform:uppercase;color:var(--on-deep-2)}
 .readout b{font:800 26px var(--f-display);letter-spacing:-.02em}
 .readout b.hot{color:#ff8a7d} .readout b.ok{color:var(--mint)}
 .readout span{font-size:13.5px;color:var(--on-deep-2)}
 .readout .note{grid-column:1/-1;border:0;padding:0 0 14px;font:500 11.5px var(--f-mono);color:var(--on-deep-2);opacity:.75}
 
+@supports not (color: color-mix(in srgb, red 50%, blue)){
+  .nav{background:rgba(6,33,29,.94)} .btn.line{border-color:rgba(233,246,242,.35)}
+  .share a,.share button{border-color:rgba(233,246,242,.3);background:rgba(233,246,242,.06)}
+  .ribbon{background:rgba(63,208,178,.14);border-color:rgba(63,208,178,.35)}
+  .mb{background:rgba(128,128,128,.12);border-color:rgba(128,128,128,.3)}
+  .readout{border-top-color:rgba(233,246,242,.1)}
+}
 /* sections */
 section{padding-block:96px}
 .sec-h{display:flex;flex-direction:column;gap:12px;max-width:760px;margin-bottom:44px}
@@ -254,7 +262,7 @@ footer{background:var(--deep);color:var(--on-deep-2);padding-block:40px;font-siz
 footer .wrap{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;align-items:center}
 footer a{color:var(--on-deep);text-decoration:none;margin-right:16px}
 footer a:hover{text-decoration:underline}
-footer .logo{height:34px;width:auto;background:#fff;border-radius:8px;padding:4px 8px}
+footer .logo{height:52px;width:auto;background:none;padding:0}
 
 @media (max-width:980px){
   .hero .wrap{grid-template-columns:minmax(0,1fr);padding-block:56px 110px}
@@ -262,7 +270,7 @@ footer .logo{height:34px;width:auto;background:#fff;border-radius:8px;padding:4p
   .stage .s1,.stage .s2,.toastcard{position:static;transform:none;width:100%;max-width:100%}
   .stage .s2{display:none}
   .readout .wrap{grid-template-columns:repeat(2,minmax(0,1fr))}
-  .readout div{border-left:0;padding-left:0}
+  .readout .wrap > div{border-left:0;padding-left:0}
   .problem,.aud,.secgrid,.gallery{grid-template-columns:minmax(0,1fr)}
   .step{grid-template-columns:minmax(0,1fr);gap:22px}
   .step:nth-child(even) .txt{order:0}
@@ -276,13 +284,46 @@ footer .logo{height:34px;width:auto;background:#fff;border-radius:8px;padding:4p
   .nav .btn{margin-left:auto}
 }
 @media (max-width:620px){
-  section{padding-block:68px}
+  section{padding-block:60px}
+  .sec-h{margin-bottom:28px}
+  .sec-h p{font-size:16.5px}
+  .hero .wrap{padding-block:40px 96px;gap:36px}
+  .hero h1{font-size:clamp(34px,10vw,44px)}
+  .hero .cta{flex-direction:column;align-items:stretch}
+  .hero .cta .btn{width:100%}
+  .trust{gap:8px 16px}
+  .readout .wrap > div{padding-block:14px;border-top:1px solid rgba(233,246,242,.1)}
+  .readout .wrap > div:first-child{border-top:0}
+  .readout b{font-size:24px}
+  .problem,.aud,.secgrid,.gallery{grid-template-columns:minmax(0,1fr)}
+  .areas{grid-template-columns:minmax(0,1fr);gap:10px}
+  .area{display:grid;grid-template-columns:42px minmax(0,1fr);column-gap:14px;row-gap:3px;padding:16px}
+  .area .ic{grid-row:1/4}
+  .area::after{display:none}
+  .area .dev{margin-top:2px}
+  .step{gap:20px;padding-block:22px}
+  .step .frame{order:2}
+  .step:nth-child(even) .txt{order:1}
+  .mods .row{grid-template-columns:auto minmax(0,1fr);gap:6px 12px;padding:16px}
+  .mods .row > :nth-child(3),.mods .row > :nth-child(4){grid-column:1/-1}
+  .share{gap:8px}
+  .share > span{width:100%}
+  .share a,.share button{padding:8px 13px;font-size:13.5px}
+  .trialbox{padding:20px;gap:10px}
+  .trialbox .days{text-align:left;font-size:44px}
+  footer .wrap{flex-direction:column;align-items:flex-start}
+  footer .wrap > div:last-child{display:flex;flex-wrap:wrap;gap:6px 16px}
+  footer .wrap > div:last-child a{margin:0}
   form{grid-template-columns:minmax(0,1fr);padding:20px}
   .readout .wrap{grid-template-columns:minmax(0,1fr)}
   .areas{grid-template-columns:minmax(0,1fr)}
   .trialbox{grid-template-columns:minmax(0,1fr)}
   .hero .lead{font-size:17px}
-  .mark small{display:none}
+  .nav .wrap{gap:12px}
+  .nav .btn{padding:8px 13px;font-size:13px;white-space:nowrap}
+  .mark{gap:9px;min-width:0}
+  .mark b{font-size:17px}
+  .mark small{font-size:11px;white-space:nowrap}
 }
 </style>
 
@@ -480,7 +521,7 @@ footer .logo{height:34px;width:auto;background:#fff;border-radius:8px;padding:4p
 </main>
 
 <footer><div class="wrap">
-  <div style="display:flex;align-items:center;gap:16px;flex-wrap:wrap"><img class="logo" src="assets/duurvextech-logo.png" alt="DuurveX-Tech" width="120" height="34"><span>Quellvane is a product of DuurveX-Tech.<br>© DuurveX-Tech 2025. All rights reserved.</span></div>
+  <div style="display:flex;align-items:center;gap:16px;flex-wrap:wrap"><img class="logo" src="assets/duurvextech-logo-white.png" alt="DuurveX-Tech" width="100" height="52"><span>Quellvane is a product of DuurveX-Tech.<br>© DuurveX-Tech 2025. All rights reserved.</span></div>
   <div><a href="licence-agreement.html">Licence agreement</a><a href="terms.html">Terms of Use</a><a href="privacy.html">Privacy Policy</a><a href="https://www.duurvextech.com/">duurvextech.com</a></div>
 </div></footer>
 
