@@ -13,20 +13,20 @@
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>Quellvane by DuurveX-Tech</title>
 <meta name="claude:viewport-fit-sides" content="cover">
-<meta name="description" content="Quellvane: hands-free device reliability for cath lab teams. Voice prep checklists, team briefings, lot surveillance, FRACAS and 8D, Weibull, FMEA and reliability growth. Access by approval.">
+<meta name="description" content="Quellvane: hands-free device reliability for every hospital procedure area, from the operating room and cath lab to endoscopy, the ICU and the emergency department. Voice prep checklists, team briefings, lot surveillance, FRACAS and 8D, Weibull, FMEA and reliability growth. 30-day free trial.">
 <link rel="canonical" href="https://www.duurvextech.com/quellvane/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="DuurveX-Tech">
 <meta property="og:url" content="https://www.duurvextech.com/quellvane/">
 <meta property="og:title" content="Quellvane by DuurveX-Tech">
-<meta property="og:description" content="Fewer device surprises for every cath lab team. Hands-free device capture, team briefings, lot surveillance and FRACAS in one tool.">
+<meta property="og:description" content="Fewer device surprises in every procedure room: operating rooms, cath labs, endoscopy, ICU and more. Hands-free device capture, lot surveillance and FRACAS in one tool. Try it free for 30 days.">
 <meta property="og:image" content="https://www.duurvextech.com/quellvane/assets/og-image.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Quellvane: fewer device surprises for every cath lab team">
+<meta property="og:image:alt" content="Quellvane: fewer device surprises in every procedure room">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Quellvane by DuurveX-Tech">
-<meta name="twitter:description" content="Hands-free device capture, team briefings, lot surveillance and FRACAS for cath lab teams. Access by approval.">
+<meta name="twitter:description" content="Hands-free device capture, lot surveillance and FRACAS for every hospital procedure area. 30-day free trial.">
 <meta name="twitter:image" content="https://www.duurvextech.com/quellvane/assets/og-image.jpg">
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="assets/app-icon.png">
@@ -179,6 +179,36 @@ section{padding-block:96px}
 .player video{width:100%;aspect-ratio:16/9;max-width:100%;background:#000}
 .filmnote{display:flex;gap:18px;flex-wrap:wrap;margin-top:14px;font:500 13px var(--f-mono);color:var(--on-deep-2)}
 
+.share{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-top:22px}
+.share > span{font:600 12px var(--f-mono);letter-spacing:.1em;text-transform:uppercase;color:var(--on-deep-2);margin-right:4px}
+.share a,.share button{display:inline-flex;align-items:center;gap:8px;padding:9px 15px;border-radius:999px;border:1px solid color-mix(in srgb,var(--on-deep) 28%,transparent);background:color-mix(in srgb,var(--on-deep) 6%,transparent);color:var(--on-deep);font:600 14px var(--f-body);text-decoration:none;cursor:pointer}
+.share a:hover,.share button:hover{background:color-mix(in srgb,var(--on-deep) 14%,transparent)}
+.share svg{width:16px;height:16px;flex:none}
+.share .done{border-color:var(--mint);color:var(--mint)}
+
+/* areas */
+.areas{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+.area{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:20px;display:flex;flex-direction:column;gap:8px;position:relative;overflow:hidden}
+.area::after{content:"";position:absolute;right:-30px;top:-30px;width:90px;height:90px;border-radius:50%;background:var(--teal-soft);opacity:.7}
+.area .ic{width:42px;height:42px;border-radius:12px;background:var(--deep);color:var(--mint);display:grid;place-items:center;position:relative;z-index:1}
+.area h3{font-size:18px;position:relative;z-index:1}
+.area .proc{font-size:14.5px;color:var(--ink)}
+.area .dev{font:500 12.5px var(--f-mono);color:var(--muted);margin-top:auto}
+.area.hl{border-color:var(--teal);box-shadow:0 0 0 1px var(--teal)}
+.areas-foot{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:40px;align-items:center;margin-top:40px}
+.areas-foot p{color:var(--muted);font-size:17px}
+.areas-foot b{color:var(--ink)}
+
+/* trial */
+.trialbox{margin-top:30px;background:var(--deep);color:var(--on-deep);border-radius:20px;padding:24px 26px;display:grid;grid-template-columns:auto minmax(0,1fr);gap:18px;align-items:center;position:relative;overflow:hidden}
+.trialbox::before{content:"";position:absolute;inset:auto -60px -80px auto;width:220px;height:220px;border-radius:50%;background:radial-gradient(closest-side,color-mix(in srgb,var(--mint) 35%,transparent),transparent)}
+.trialbox .days{font:800 54px/1 var(--f-display);color:var(--mint);text-align:center}
+.trialbox .days small{display:block;font:600 11px var(--f-mono);letter-spacing:.14em;text-transform:uppercase;color:var(--on-deep-2);margin-top:6px}
+.trialbox b{font:700 19px var(--f-display);display:block;margin-bottom:4px}
+.trialbox span{color:var(--on-deep-2);font-size:15px}
+.ribbon{margin-bottom:10px;display:inline-flex;align-items:center;gap:8px;padding:6px 12px 6px 6px;border-radius:999px;background:color-mix(in srgb,var(--mint) 14%,transparent);border:1px solid color-mix(in srgb,var(--mint) 35%,transparent);color:var(--on-deep);font:600 13.5px var(--f-body);text-decoration:none;width:max-content;max-width:100%}
+.ribbon em{font-style:normal;background:var(--mint);color:#03201a;border-radius:999px;padding:3px 9px;font:700 11.5px var(--f-mono);letter-spacing:.06em;text-transform:uppercase}
+
 /* security */
 .secgrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
 .sec{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:20px;display:flex;flex-direction:column;gap:10px}
@@ -239,6 +269,8 @@ footer .logo{height:34px;width:auto;background:#fff;border-radius:8px;padding:4p
   .mods .row{grid-template-columns:70px minmax(0,1fr)}
   .mods .row > :nth-child(3),.mods .row > :nth-child(4){grid-column:2}
   .mods .row:first-child{display:none}
+  .areas{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .areas-foot{grid-template-columns:minmax(0,1fr)}
   .req .grid,.faq{grid-template-columns:minmax(0,1fr)}
   .nav nav{display:none}
   .nav .btn{margin-left:auto}
@@ -247,6 +279,8 @@ footer .logo{height:34px;width:auto;background:#fff;border-radius:8px;padding:4p
   section{padding-block:68px}
   form{grid-template-columns:minmax(0,1fr);padding:20px}
   .readout .wrap{grid-template-columns:minmax(0,1fr)}
+  .areas{grid-template-columns:minmax(0,1fr)}
+  .trialbox{grid-template-columns:minmax(0,1fr)}
   .hero .lead{font-size:17px}
   .mark small{display:none}
 }
@@ -254,19 +288,20 @@ footer .logo{height:34px;width:auto;background:#fff;border-radius:8px;padding:4p
 
 <header class="nav"><div class="wrap">
   <a class="mark" href="#top" aria-label="Quellvane home"><span class="ic"><svg viewBox="0 0 26 26" width="20" height="20" aria-hidden="true"><path d="M3 15 L9 15 L11.5 8 L15 19 L17.5 12 L23 12" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><b>Quellvane</b><small>by DuurveX-Tech</small></span></a>
-  <nav aria-label="Page"><a href="#how">How it works</a><a href="#teams">For your team</a><a href="#modules">Modules</a><a href="#security">Security</a><a href="#faq">FAQ</a></nav>
-  <a class="btn solid" href="#request">Request access</a>
+  <nav aria-label="Page"><a href="#areas">Where it works</a><a href="#how">How it works</a><a href="#teams">For your team</a><a href="#modules">Modules</a><a href="#security">Security</a><a href="#faq">FAQ</a></nav>
+  <a class="btn solid" href="#request">Start free trial</a>
 </div></header>
 
 <main id="top">
 <div class="hero">
   <div class="wrap">
     <div>
-      <p class="eyebrow">Hands-free device reliability for the cath lab</p>
-      <h1>Fewer device surprises for <em>every cath lab team.</em></h1>
-      <p class="lead">Quellvane listens for device problems during prep and cases, warns clinicians before a failing lot reaches the next patient, and gives quality and biomed the evidence to fix it.</p>
-      <div class="cta"><a class="btn solid" href="#request">Request access</a><a class="btn line" href="#film">▶ Watch the 3-minute film</a></div>
-      <div class="trust"><span><i></i>Access by approval</span><span><i></i>One-time code sign-in</span><span><i></i>No patient data</span></div>
+      <a class="ribbon" href="#request"><em>Free</em>Try every module free for 30 days</a>
+      <p class="eyebrow">Hands-free device reliability for the whole hospital</p>
+      <h1>Fewer device surprises in <em>every procedure room.</em></h1>
+      <p class="lead">From the operating room and cath lab to endoscopy, the ICU and the emergency department, Quellvane listens for device problems during prep and cases, warns teams before a failing lot reaches the next patient, and gives quality and biomed the evidence to fix it.</p>
+      <div class="cta"><a class="btn solid" href="#request">Start your 30-day free trial</a><a class="btn line" href="#film">▶ Watch the 3-minute film</a></div>
+      <div class="trust"><span><i></i>30-day free trial</span><span><i></i>Access by approval</span><span><i></i>No patient data</span></div>
     </div>
     <div class="stage" aria-label="Quellvane screens">
       <div class="shot s1"><img src="assets/shot-briefing.jpg" width="1600" height="1000" alt="Quellvane team briefing listing lots not to open, rooms to prep and fixes in progress"></div>
@@ -281,7 +316,7 @@ footer .logo{height:34px;width:auto;background:#fff;border-radius:8px;padding:4p
 </div>
 
 <div class="readout" aria-label="Example readout"><div class="wrap">
-  <div><small>Cath Lab 2 · 6:58 AM</small><b class="ok">12 of 12</b><span>Room ready, checklist filled by voice</span></div>
+  <div><small>OR 3 · 6:52 AM</small><b class="ok">10 of 10</b><span>Room ready, checklist filled by voice</span></div>
   <div><small>Lot L-7718 · guide catheter</small><b class="hot">5.3×</b><span>Kink rate against normal · held</span></div>
   <div><small>Patients between kinks</small><b>15 <span style="font:600 15px var(--f-body)">vs 80</span></b><span>Normal for this device</span></div>
   <div><small>FR-0012 · verification</small><b class="ok">46 / 230</b><span>Clean devices since the fix</span></div>
@@ -290,13 +325,31 @@ footer .logo{height:34px;width:auto;background:#fff;border-radius:8px;padding:4p
 
 <section aria-labelledby="pb-h"><div class="wrap">
   <div class="sec-h"><p class="eyebrow">The problem</p><h2 id="pb-h">A device fails mid-case. It is swapped, thrown away, and forgotten.</h2>
-    <p>Each team sees one small failure. Nobody sees the pattern across rooms and weeks, until a whole lot has reached patients.</p></div>
+    <p>Each team sees one small failure. Nobody sees the pattern across rooms, units and weeks, until a whole lot has reached patients.</p></div>
   <div class="problem">
-    <div class="pcard"><span class="when">Cath Lab 1 · Monday</span><h3>Guide catheter kinks while turning</h3><span class="bin"><i>✕</i>Swapped, not reported</span></div>
+    <div class="pcard"><span class="when">OR 3 · Monday</span><h3>Stapler misfires on the first firing</h3><span class="bin"><i>✕</i>Swapped, not reported</span></div>
     <div class="pcard"><span class="when">Cath Lab 2 · Wednesday</span><h3>Balloon slow to deflate</h3><span class="bin"><i>✕</i>Case finished, not reported</span></div>
-    <div class="pcard"><span class="when">Cath Lab 1 · Friday</span><h3>Stent will not cross the lesion</h3><span class="bin"><i>✕</i>New one opened, not reported</span></div>
+    <div class="pcard"><span class="when">ICU · Friday</span><h3>Central line will not flush</h3><span class="bin"><i>✕</i>New kit opened, not reported</span></div>
   </div>
   <p class="punch">Same lot? <span>Nobody can tell.</span> Quellvane can, without asking anyone to stop and fill in a form.</p>
+</div></section>
+
+<section id="areas" aria-labelledby="ar-h" style="padding-top:0"><div class="wrap">
+  <div class="sec-h"><p class="eyebrow">Where it works</p><h2 id="ar-h">One tool for every place devices are opened</h2><p>The cath lab is one of many. Quellvane follows single-use and reusable devices wherever procedures happen, and every area feeds the same lot surveillance and FRACAS.</p></div>
+  <div class="areas">
+    <div class="area"><span class="ic"><svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20l7-7M9 7l8 8M14 4l6 6-3 3-6-6z"/></svg></span><h3>Operating rooms</h3><span class="proc">Laparoscopic and open surgery</span><span class="dev">staplers · trocars · electrosurgical pencils</span></div>
+    <div class="area"><span class="ic"><svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 13h4l2-6 4 12 2-6h6"/></svg></span><h3>Cath lab</h3><span class="proc">Stents and diagnostic angiograms</span><span class="dev">guide catheters · balloons · stents</span></div>
+    <div class="area"><span class="ic"><svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L5 14h6l-1 8 8-12h-6z"/></svg></span><h3>Electrophysiology lab</h3><span class="proc">AF ablation and mapping</span><span class="dev">ablation and diagnostic catheters</span></div>
+    <div class="area"><span class="ic"><svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8"/><path d="M12 4v4M12 16v4M4 12h4M16 12h4"/></svg></span><h3>Interventional radiology</h3><span class="proc">Embolisation, drains and biopsies</span><span class="dev">sheaths · guidewires · catheters</span></div>
+    <div class="area"><span class="ic"><svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6c6 0 6 6 12 6a4 4 0 0 1 0 8H8"/><circle cx="6" cy="6" r="2"/></svg></span><h3>Endoscopy</h3><span class="proc">Colonoscopy and upper GI</span><span class="dev">biopsy forceps · reprocessed scopes</span></div>
+    <div class="area"><span class="ic"><svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-4.5-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.5-7 10-7 10z"/><path d="M8 12h2l1-2 2 4 1-2h2"/></svg></span><h3>ICU and critical care</h3><span class="proc">Central lines and infusions</span><span class="dev">central line kits · infusion sets</span></div>
+    <div class="area"><span class="ic"><svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/><rect x="3" y="3" width="18" height="18" rx="4"/></svg></span><h3>Emergency department</h3><span class="proc">Intubation and resuscitation</span><span class="dev">endotracheal tubes · airway devices</span></div>
+    <div class="area"><span class="ic"><svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.5 2.5-2.4-.6-.6-2.4z"/></svg></span><h3>Biomed and sterile processing</h3><span class="proc">Reusable instruments and room equipment</span><span class="dev">service dates · Weibull life · replacement</span></div>
+  </div>
+  <div class="areas-foot">
+    <div class="frame"><img src="assets/shot-or-prep.jpg" width="1600" height="1000" loading="lazy" alt="Operating room prep checklist for laparoscopic gallbladder removal, filled by voice"></div>
+    <p><b>Built-in voice checklists</b> for laparoscopic surgery, colonoscopy, central line insertion, intubation, stent procedures, diagnostic angiograms and AF ablation.<br><br>Add your own rooms, procedures and device types for any other area, such as interventional radiology, labour and delivery or dialysis. A lot held in one area is flagged in every room.</p>
+  </div>
 </div></section>
 
 <section class="how" id="how" aria-labelledby="how-h"><div class="wrap">
@@ -305,9 +358,9 @@ footer .logo{height:34px;width:auto;background:#fff;border-radius:8px;padding:4p
       <p class="quote">“Quellvane, today's briefing.”</p></div>
     <div class="frame"><img src="assets/shot-briefing.jpg" width="1600" height="1000" loading="lazy" alt="Team briefing with Do not use, Caution and Info lines"></div></div>
   <div class="step"><div class="txt"><span class="num">02</span><h3>Prep the room by voice</h3><p>The checklist fills as the team talks and lays out devices. Every lot is checked against the hold list before a package is opened.</p>
-      <ul><li>“Pressures zeroed.” “Defib checked.” Items tick green.</li><li>A held lot turns red and Quellvane says so out loud.</li><li>“Room ready, 12 of 12” is recorded with the time.</li></ul></div>
+      <ul><li>“Suction working.” “Count done.” “Pressures zeroed.” Items tick green.</li><li>A held lot turns red and Quellvane says so out loud.</li><li>“Room ready, 12 of 12” is recorded with the time.</li></ul></div>
     <div class="frame"><img src="assets/shot-prep-dark.jpg" width="1600" height="1000" loading="lazy" alt="Prep checklist on a dark room display, all items complete"></div></div>
-  <div class="step"><div class="txt"><span class="num">03</span><h3>Capture problems hands-free, and catch the lot</h3><p>“It's kinked, open another one.” Quellvane drafts a report on the device in use, notices the swap, and the team confirms by voice at sign-out. Every report joins its lot.</p>
+  <div class="step"><div class="txt"><span class="num">03</span><h3>Capture problems hands-free, and catch the lot</h3><p>“The stapler misfired, open another one.” Quellvane drafts a report on the device in use, notices the swap, and the team confirms by voice at sign-out. Every report joins its lot.</p>
       <ul><li>Confidence that a lot has a real problem, not bad luck</li><li>Patients and days between problems, against normal</li><li>A person always decides on a hold</li></ul></div>
     <div class="frame"><img src="assets/shot-lot.jpg" width="1600" height="1000" loading="lazy" alt="Lot L-7718 details with confidence over 99.99 percent and 15 patients between problems"></div></div>
   <div class="step"><div class="txt"><span class="num">04</span><h3>Close the loop with FRACAS and 8D</h3><p>Each problem moves from report to containment, root cause, corrective action and verification. D1 to D8 are drafted from the evidence in every study, and an incident closes only when enough clean devices prove the fix worked.</p></div>
@@ -317,7 +370,7 @@ footer .logo{height:34px;width:auto;background:#fff;border-radius:8px;padding:4p
 <section id="teams" aria-labelledby="t-h"><div class="wrap">
   <div class="sec-h"><p class="eyebrow">For everyone in the hospital</p><h2 id="t-h">Built for the people who live with device problems</h2><p>Start where you work. Every team shares the same evidence.</p></div>
   <div class="aud">
-    <div class="acard" style="--c1:var(--m-cap);--c2:var(--m-clin)"><h3>Cardiologists, surgeons, nurses and technologists</h3><p>Stay focused on the patient. Say what happened; Quellvane does the paperwork.</p>
+    <div class="acard" style="--c1:var(--m-cap);--c2:var(--m-clin)"><h3>Surgeons, physicians, nurses and technologists</h3><p>Stay focused on the patient. Say what happened; Quellvane does the paperwork.</p>
       <ul><li>Voice prep checklist and held-lot warnings</li><li>Morning briefing, read aloud</li><li>Case impact: delays, swaps, minutes lost</li><li>Record what the team needs from each device</li></ul>
       <div class="chips"><span class="mb m-cap"><b>CAP</b> Room capture</span><span class="mb m-clin"><b>CLIN</b> Clinical impact</span></div></div>
     <div class="acard" style="--c1:var(--m-lot);--c2:var(--m-frc)"><h3>Quality, risk and supply</h3><p>See which lots fail more than normal, with the confidence to act, and close each problem properly.</p>
@@ -333,8 +386,8 @@ footer .logo{height:34px;width:auto;background:#fff;border-radius:8px;padding:4p
   <div class="sec-h"><p class="eyebrow">Modules</p><h2 id="m-h">Seven analyses, one project</h2><p>Each module is its own study with inputs, results, plots, a report and the methods behind it. Findings from every module flow into FRACAS.</p></div>
   <div class="mods" role="table" aria-label="Quellvane modules">
     <div class="row" role="row"><span role="columnheader">Code</span><span role="columnheader">Module</span><span role="columnheader">Answers</span><span role="columnheader">Key methods</span></div>
-    <div class="row" role="row"><span role="cell"><span class="mb m-cap"><b>CAP</b></span></span><span role="cell"><b>Room capture</b><span class="who">Cath lab team</span></span><span class="q" role="cell">Is the room ready, and which device failed during the case?</span><span class="meth" role="cell">voice checklist · hold check · swap detection</span></div>
-    <div class="row" role="row"><span role="cell"><span class="mb m-clin"><b>CLIN</b></span></span><span role="cell"><b>Clinical impact</b><span class="who">Cath lab team</span></span><span class="q" role="cell">What do device problems cost the team, and what reliability do clinicians need?</span><span class="meth" role="cell">briefing · lookback · burden score 1–125</span></div>
+    <div class="row" role="row"><span role="cell"><span class="mb m-cap"><b>CAP</b></span></span><span role="cell"><b>Room capture</b><span class="who">Procedure teams</span></span><span class="q" role="cell">Is the room ready, and which device failed during the case?</span><span class="meth" role="cell">voice checklist · hold check · swap detection</span></div>
+    <div class="row" role="row"><span role="cell"><span class="mb m-clin"><b>CLIN</b></span></span><span role="cell"><b>Clinical impact</b><span class="who">Procedure teams</span></span><span class="q" role="cell">What do device problems cost the team, and what reliability do clinicians need?</span><span class="meth" role="cell">briefing · lookback · burden score 1–125</span></div>
     <div class="row" role="row"><span role="cell"><span class="mb m-lot"><b>LOT</b></span></span><span role="cell"><b>Lot surveillance</b><span class="who">Quality office</span></span><span class="q" role="cell">Which lots fail more than normal, and how sure are we?</span><span class="meth" role="cell">binomial confidence · Wilson range</span></div>
     <div class="row" role="row"><span role="cell"><span class="mb m-frc"><b>FRC</b></span></span><span role="cell"><b>FRACAS</b><span class="who">Quality office</span></span><span class="q" role="cell">How do we close each problem with evidence and prove the fix?</span><span class="meth" role="cell">D1–D8 from evidence · success-run</span></div>
     <div class="row" role="row"><span role="cell"><span class="mb m-wbl"><b>WBL</b></span></span><span role="cell"><b>Weibull life data</b><span class="who">Biomed</span></span><span class="q" role="cell">How long do reusable devices last, and when should they be replaced?</span><span class="meth" role="cell">MLE · rank regression · B10</span></div>
@@ -349,9 +402,19 @@ footer .logo{height:34px;width:auto;background:#fff;border-radius:8px;padding:4p
 </div></section>
 
 <section class="film" id="film" aria-labelledby="f-h"><div class="wrap">
-  <div class="sec-h"><p class="eyebrow">Film</p><h2 id="f-h">See one heart procedure, step by step</h2><p>A three-minute concept film: prep by voice, a kinked catheter caught hands-free, and two lots held before more patients.</p></div>
-  <div class="player"><video controls preload="none" playsinline poster="assets/film-poster.jpg"><source src="assets/quellvane-film.mp4" type="video/mp4">Your browser cannot play this video.</video></div>
+  <div class="sec-h"><p class="eyebrow">Film</p><h2 id="f-h">See one procedure, step by step</h2><p>A three-minute concept film set in a cath lab: prep by voice, a kinked catheter caught hands-free, and two lots held before more patients. The same workflow runs in the operating room, endoscopy and the ICU.</p></div>
+  <div class="player" id="player"><video id="film-video" controls controlslist="nodownload noremoteplayback noplaybackrate" disablepictureinpicture disableremoteplayback preload="none" playsinline poster="assets/film-poster.jpg"><source src="assets/quellvane-film.mp4" type="video/mp4">Your browser cannot play this video.</video></div>
   <div class="filmnote"><span>About 3 minutes</span><span>Captions on screen, no sound needed</span><span>Fictional hospital and data</span></div>
+  <div class="share" id="share" aria-label="Share the film">
+    <span>Share the film</span>
+    <button type="button" id="shNative" hidden><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12M7 8l5-5 5 5M5 14v6h14v-6"/></svg>Share…</button>
+    <a data-net="linkedin" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.5h4V21H3zM9.5 9.5h3.8v1.6h.1c.5-1 1.8-2 3.8-2 4 0 4.8 2.6 4.8 6V21h-4v-5.2c0-1.3 0-2.9-1.8-2.9s-2.1 1.4-2.1 2.8V21h-4z"/></svg>LinkedIn</a>
+    <a data-net="x" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M17.8 3h3.1l-6.8 7.8L22 21h-6.2l-4.9-6.4L5.3 21H2.2l7.3-8.3L2 3h6.4l4.4 5.8zm-1.1 16.2h1.7L7.4 4.7H5.6z"/></svg>X</a>
+    <a data-net="facebook" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M14 8.5V6.8c0-.8.5-1 1-1h2.5V2h-3.4C10.4 2 9.6 4.7 9.6 6.4v2.1H7.5v3.8h2.1V22H14v-9.7h3l.4-3.8z"/></svg>Facebook</a>
+    <a data-net="whatsapp" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.4.1-.2 0-.3 0-.5l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.3 2.2 2.2 0 0 0 .2-1.3c-.1-.1-.3-.2-.5-.3z"/></svg>WhatsApp</a>
+    <a data-net="email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>Email</a>
+    <button type="button" id="shCopy"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1"/></svg><span>Copy link</span></button>
+  </div>
 </div></section>
 
 <section id="security" aria-labelledby="s-h"><div class="wrap">
@@ -368,32 +431,33 @@ footer .logo{height:34px;width:auto;background:#fff;border-radius:8px;padding:4p
 
 <section class="req" id="request" aria-labelledby="r-h"><div class="wrap"><div class="grid">
   <div>
-    <div class="sec-h" style="margin-bottom:0"><p class="eyebrow">Request access</p><h2 id="r-h">Bring Quellvane to your cath lab</h2><p>Access is by approval for hospitals, clinical teams and the engineers who support them.</p></div>
+    <div class="sec-h" style="margin-bottom:0"><p class="eyebrow">Free trial</p><h2 id="r-h">Start your 30-day free trial</h2><p>Full access to all seven modules for hospitals, clinical teams and the engineers who support them. Every trial is approved by our team.</p></div>
+    <div class="trialbox"><div class="days">30<small>days free</small></div><div><b>Everything included, nothing to pay</b><span>All seven modules, voice capture, reports and updates. No payment details and no obligation. Before the trial ends we contact you about a licence; if you do not continue, access simply ends and your project files stay with you.</span></div></div>
     <ol class="flow">
-      <li><div><b>Request access</b><span>Fill in the form. Every request is reviewed by our team.</span></div></li>
-      <li><div><b>We review and approve</b><span>Usually within one business day. We email you the Quellvane address.</span></div></li>
+      <li><div><b>Request your free trial</b><span>Fill in the form. Every request is reviewed by our team.</span></div></li>
+      <li><div><b>We review and approve</b><span>Usually within one business day. We email you the Quellvane address, and your 30 days start.</span></div></li>
       <li><div><b>Sign in with a one-time code</b><span>Enter your work email and type the code we send to it.</span></div></li>
       <li><div><b>Accept the agreement and start</b><span>Explore the built-in example project, then set up your own rooms and devices.</span></div></li>
     </ol>
   </div>
   <div id="formArea">
     <form id="reqForm" novalidate>
-      <h3 class="full">Request access</h3>
+      <h3 class="full">Request your 30-day free trial</h3>
       <div class="fld"><label for="fName">Full name</label><input id="fName" name="name" autocomplete="name" required></div>
       <div class="fld"><label for="fEmail">Work email</label><input id="fEmail" name="email" type="email" autocomplete="email" required></div>
       <div class="fld"><label for="fOrg">Hospital or organisation</label><input id="fOrg" name="organisation" autocomplete="organization" required></div>
-      <div class="fld"><label for="fRole">Role</label><select id="fRole" name="role" required><option value="">Choose one</option><option>Interventional cardiologist</option><option>Surgeon</option><option>Electrophysiologist</option><option>Cath lab nurse or technologist</option><option>Cath lab or perioperative manager</option><option>Quality, risk or patient safety</option><option>Biomedical / clinical engineering</option><option>Supply chain or value analysis</option><option>Reliability or device engineering</option><option>IT or security</option><option>Other</option></select></div>
+      <div class="fld"><label for="fRole">Role</label><select id="fRole" name="role" required><option value="">Choose one</option><option>Surgeon</option><option>Anesthesiologist</option><option>Interventional cardiologist or electrophysiologist</option><option>Interventional radiologist</option><option>Gastroenterologist or endoscopist</option><option>Intensivist or emergency physician</option><option>Other physician</option><option>Nurse or technologist</option><option>Department or perioperative manager</option><option>Quality, risk or patient safety</option><option>Biomedical / clinical engineering</option><option>Supply chain or value analysis</option><option>Reliability or device engineering</option><option>IT or security</option><option>Other</option></select></div>
       <div class="fld"><label for="fCountry">Country</label><input id="fCountry" name="country" autocomplete="country-name" required></div>
-      <div class="fld"><label for="fRooms">Procedure rooms <span class="opt">(optional)</span></label><select id="fRooms" name="rooms"><option value="">Choose</option><option>1</option><option>2–3</option><option>4–6</option><option>7 or more</option><option>Not a hospital</option></select></div>
-      <div class="fld full"><label for="fMsg">What would you like to use Quellvane for? <span class="opt">(optional)</span></label><textarea id="fMsg" name="message" placeholder="For example: a pilot in two cath labs, starting with guide catheters and stents"></textarea></div>
+      <div class="fld"><label for="fRooms">Procedure rooms or units <span class="opt">(optional)</span></label><select id="fRooms" name="rooms"><option value="">Choose</option><option>1</option><option>2–3</option><option>4–6</option><option>7 or more</option><option>Not a hospital</option></select></div>
+      <div class="fld full"><label for="fMsg">What would you like to use Quellvane for? <span class="opt">(optional)</span></label><textarea id="fMsg" name="message" placeholder="For example: a trial in two operating rooms and the cath lab, starting with staplers and guide catheters"></textarea></div>
       <div class="hp" aria-hidden="true"><label for="fGotcha">Leave this empty</label><input id="fGotcha" name="_gotcha" tabindex="-1" autocomplete="off"></div>
       <label class="agree full"><input type="checkbox" id="fAgree" required><span>I agree to the <a href="terms.html" target="_blank" rel="noopener">Terms of Use</a> and have read the <a href="privacy.html" target="_blank" rel="noopener">Privacy Policy</a>. DuurveX-Tech may contact me about my request.</span></label>
       <p class="err full" id="fErr" role="alert"></p>
-      <div class="full"><button class="btn dark" id="fSubmit" type="submit">Request access</button></div>
+      <div class="full"><button class="btn dark" id="fSubmit" type="submit">Start my free trial</button></div>
     </form>
     <div class="thanks" id="thanks" hidden tabindex="-1">
       <span class="ic"><svg width="28" height="28" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-      <h3>Request received</h3><p>Thank you. Our team reviews every request, usually within one business day. Once approved, we email you the Quellvane address and how to sign in with a one-time code.</p>
+      <h3>Request received</h3><p>Thank you. Our team reviews every request, usually within one business day. Once approved, we email you the Quellvane address and how to sign in with a one-time code, and your 30-day free trial begins.</p>
     </div>
   </div>
 </div></div></section>
@@ -401,13 +465,15 @@ footer .logo{height:34px;width:auto;background:#fff;border-radius:8px;padding:4p
 <section id="faq" aria-labelledby="q-h"><div class="wrap">
   <div class="sec-h"><p class="eyebrow">Questions</p><h2 id="q-h">Frequently asked</h2></div>
   <div class="faq">
+    <details><summary>Is there a free trial?</summary><p>Yes. Approved hospitals and teams get 30 days of full access to all seven modules, free, with no payment details. Before it ends we contact you about a licence; if you do not continue, access simply ends and your project files stay with you.</p></details>
+    <details><summary>Which hospital areas does it cover?</summary><p>Any area where devices are opened: operating rooms, cath and EP labs, interventional radiology, endoscopy, the ICU, the emergency department and more. Voice checklists are built in for common procedures, and you can add your own rooms, procedures and device types.</p></details>
     <details><summary>Does Quellvane store patient information?</summary><p>No. It records devices, lots, times, rooms and procedure types only. The agreement every user accepts forbids entering patient information, typed or spoken.</p></details>
     <details><summary>Is it a medical device?</summary><p>No. Quellvane does not diagnose, treat or support clinical decisions for any patient. It gives teams device reliability evidence; qualified people make every decision.</p></details>
     <details><summary>Does anyone have to touch a screen in the room?</summary><p>No. The checklist fills by voice, devices are identified as they are laid out, and reports are confirmed by voice at sign-out. Desk screens are for the quality office and biomed.</p></details>
     <details><summary>Where does our data go?</summary><p>It stays on your devices and in project files you save. DuurveX-Tech does not receive it. Only sign-in details are processed by our access provider, Cloudflare.</p></details>
     <details><summary>How does voice work, and is audio kept?</summary><p>Voice uses your browser's speech recognition, which may process audio through the browser maker's service. Quellvane keeps only device events and stores no audio. Use voice in procedure rooms after your privacy and IT teams approve it.</p></details>
     <details><summary>What do we need to run it?</summary><p>A current Chrome or Edge on Windows, macOS or a tablet, a work email, and for voice a microphone. It installs from the browser in one click and works offline.</p></details>
-    <details><summary>Who can get access?</summary><p>Clinicians, quality, biomedical engineering, supply and IT teams at healthcare organisations, and engineers who support them. Each request is reviewed, and access is granted per work email.</p></details>
+    <details><summary>Who can get access?</summary><p>Surgeons, physicians, nurses, technologists, quality, biomedical engineering, supply and IT teams at healthcare organisations, and engineers who support them. Each request is reviewed, and access is granted per work email.</p></details>
     <details><summary>Are the calculations validated?</summary><p>The methods are standard reliability engineering models, checked against independent calculations. Results are estimates for your engineers and clinical leaders to review; every module's Methods tab explains them.</p></details>
   </div>
 </div></section>
@@ -421,6 +487,8 @@ footer .logo{height:34px;width:auto;background:#fff;border-radius:8px;padding:4p
 <script>
 const CONFIG = {
   FORM_ENDPOINT: 'https://formspree.io/f/xljjnynq',   // form service address (the same form as EPT; requests are labelled "Quellvane")
+  SHARE_URL: 'https://www.duurvextech.com/quellvane/#film',   // the link people share; the film itself is never shared as a file
+  SHARE_TEXT: 'Quellvane: hands-free device reliability for every hospital procedure room. Watch the 3-minute film:',
 };
 (() => {
   const f = document.getElementById('reqForm'), err = document.getElementById('fErr'), btn = document.getElementById('fSubmit');
@@ -434,14 +502,39 @@ const CONFIG = {
     if (document.getElementById('fGotcha').value) return;
     if (!CONFIG.FORM_ENDPOINT){ err.textContent = 'Access requests open soon. Please email contact@duurvextech.com.'; return; }
     const data = Object.fromEntries(new FormData(f).entries());
-    data.product = 'Quellvane'; data._subject = 'Quellvane access request: ' + data.organisation; data.page = location.href;
+    data.product = 'Quellvane'; data.request = '30-day free trial'; data._subject = 'Quellvane free trial request: ' + data.organisation; data.page = location.href;
     btn.disabled = true; btn.textContent = 'Sending…';
     let sent = false;
     try { const r = await fetch(CONFIG.FORM_ENDPOINT, {method:'POST', headers:{'Content-Type':'application/json', Accept:'application/json'}, body:JSON.stringify(data)}); sent = r.ok; } catch (x) { sent = false; }
-    btn.disabled = false; btn.textContent = 'Request access';
+    btn.disabled = false; btn.textContent = 'Start my free trial';
     if (!sent){ err.textContent = 'Your request could not be sent. Check your connection and try again, or email contact@duurvextech.com.'; return; }
-    try { if (window.gtag) gtag('event', 'quellvane_access_request', {role:data.role}); } catch (x) {}
+    try { if (window.gtag) gtag('event', 'quellvane_trial_request', {role:data.role}); } catch (x) {}
     f.hidden = true; const t = document.getElementById('thanks'); t.hidden = false; t.focus();
+  });
+})();
+
+/* Film: play-only (no download button, no right-click save), and share links for social media */
+(() => {
+  const v = document.getElementById('film-video'), player = document.getElementById('player');
+  ['contextmenu', 'dragstart'].forEach(ev => player.addEventListener(ev, e => e.preventDefault()));
+  v.addEventListener('play', () => { try { if (window.gtag) gtag('event', 'quellvane_film_play'); } catch (x) {} }, {once:true});
+  const url = CONFIG.SHARE_URL, text = CONFIG.SHARE_TEXT, u = encodeURIComponent(url), t = encodeURIComponent(text);
+  const links = {
+    linkedin:`https://www.linkedin.com/sharing/share-offsite/?url=${u}`,
+    x:`https://twitter.com/intent/tweet?text=${t}&url=${u}`,
+    facebook:`https://www.facebook.com/sharer/sharer.php?u=${u}`,
+    whatsapp:`https://wa.me/?text=${t}%20${u}`,
+    email:`mailto:?subject=${encodeURIComponent('Quellvane: a 3-minute film')}&body=${t}%0A%0A${u}`
+  };
+  const track = net => { try { if (window.gtag) gtag('event', 'share', {method:net, content_type:'video', item_id:'quellvane-film'}); } catch (x) {} };
+  document.querySelectorAll('#share a[data-net]').forEach(a => { a.href = links[a.dataset.net]; a.addEventListener('click', () => track(a.dataset.net)); });
+  const nat = document.getElementById('shNative');
+  if (navigator.share){ nat.hidden = false; nat.addEventListener('click', () => { navigator.share({title:'Quellvane', text, url}).then(() => track('native')).catch(() => {}); }); }
+  const cp = document.getElementById('shCopy');
+  cp.addEventListener('click', async () => {
+    let ok = false; try { await navigator.clipboard.writeText(url); ok = true; } catch (x) {}
+    cp.querySelector('span').textContent = ok ? 'Link copied' : url; cp.classList.add('done'); track('copy');
+    setTimeout(() => { cp.querySelector('span').textContent = 'Copy link'; cp.classList.remove('done'); }, 2500);
   });
 })();
 </script>
