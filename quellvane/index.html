@@ -1,0 +1,449 @@
+<!doctype html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-JZ5CT9YF46"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-JZ5CT9YF46');
+</script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Quellvane by DuurveX-Tech</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Quellvane: hands-free device reliability for cath lab teams. Voice prep checklists, team briefings, lot surveillance, FRACAS and 8D, Weibull, FMEA and reliability growth. Access by approval.">
+<link rel="canonical" href="https://www.duurvextech.com/quellvane/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="DuurveX-Tech">
+<meta property="og:url" content="https://www.duurvextech.com/quellvane/">
+<meta property="og:title" content="Quellvane by DuurveX-Tech">
+<meta property="og:description" content="Fewer device surprises for every cath lab team. Hands-free device capture, team briefings, lot surveillance and FRACAS in one tool.">
+<meta property="og:image" content="https://www.duurvextech.com/quellvane/assets/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Quellvane: fewer device surprises for every cath lab team">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Quellvane by DuurveX-Tech">
+<meta name="twitter:description" content="Hands-free device capture, team briefings, lot surveillance and FRACAS for cath lab teams. Access by approval.">
+<meta name="twitter:image" content="https://www.duurvextech.com/quellvane/assets/og-image.jpg">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/app-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700;800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+</head>
+<body>
+<style>
+/* Layout: a clinical instrument. Deep-teal hero with a live heartbeat trace, a room-readout strip, then a four-step walkthrough, audiences, modules, film, security and the access request. */
+:root{
+  --bg:#f3f7f6; --panel:#ffffff; --panel-2:#eaf2f0; --ink:#0d1f1b; --muted:#4e635c; --faint:#7a8e88; --line:#d5e1de;
+  --deep:#06211d; --deep-2:#0a332d; --on-deep:#e9f6f2; --on-deep-2:#a9c7bf;
+  --mint:#3fd0b2; --teal:#0c7a68; --teal-soft:#d6efe8; --coral:#d9483b; --coral-soft:#fbe6e3; --amber:#a96a00; --amber-soft:#fbefd6;
+  --m-cap:#0c7a68; --m-clin:#8a6400; --m-lot:#2f62c9; --m-frc:#c2366a; --m-wbl:#b4560b; --m-fmea:#6a4bc4; --m-grw:#3d8a2f;
+  --f-display:"Plus Jakarta Sans","Helvetica Neue",Arial,sans-serif; --f-body:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",sans-serif; --f-mono:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#08130f; --panel:#0f1f1b; --panel-2:#132a25; --ink:#e7f3ef; --muted:#9fb7b0; --faint:#6f8a83; --line:#21403a;
+  --deep:#041714; --deep-2:#082a25; --teal:#3fd0b2; --teal-soft:#123a33; --coral:#ff7a6c; --coral-soft:#3a1916; --amber:#f2b04b; --amber-soft:#3a2a10;
+  --m-cap:#3fd0b2; --m-clin:#f2c94c; --m-lot:#7eaaff; --m-frc:#ff8fb1; --m-wbl:#ffa95e; --m-fmea:#bba2ff; --m-grw:#93d77f; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#08130f; --panel:#0f1f1b; --panel-2:#132a25; --ink:#e7f3ef; --muted:#9fb7b0; --faint:#6f8a83; --line:#21403a;
+  --deep:#041714; --deep-2:#082a25; --teal:#3fd0b2; --teal-soft:#123a33; --coral:#ff7a6c; --coral-soft:#3a1916; --amber:#f2b04b; --amber-soft:#3a2a10;
+  --m-cap:#3fd0b2; --m-clin:#f2c94c; --m-lot:#7eaaff; --m-frc:#ff8fb1; --m-wbl:#ffa95e; --m-fmea:#bba2ff; --m-grw:#93d77f; color-scheme:dark}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:16.5px/1.6 var(--f-body);-webkit-font-smoothing:antialiased}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:30;background:var(--deep)}
+a{color:var(--teal)}
+img,video{max-width:100%;height:auto;display:block}
+h1,h2,h3{font-family:var(--f-display);text-wrap:balance;margin:0;letter-spacing:-.02em}
+p{margin:0}
+.wrap{max-width:1180px;margin:0 auto;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
+.eyebrow{font:600 12px var(--f-mono);letter-spacing:.14em;text-transform:uppercase;color:var(--teal)}
+:focus-visible{outline:2.5px solid var(--mint);outline-offset:3px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:13px 22px;border-radius:999px;font:700 15.5px var(--f-display);text-decoration:none;border:1.5px solid transparent;cursor:pointer;transition:transform .15s ease,background .15s ease}
+.btn.solid{background:var(--mint);color:#03201a}
+.btn.solid:hover{transform:translateY(-1px)}
+.btn.line{border-color:color-mix(in srgb,var(--on-deep) 35%,transparent);color:var(--on-deep);background:transparent}
+.btn.line:hover{background:color-mix(in srgb,var(--on-deep) 8%,transparent)}
+.btn.dark{background:var(--ink);color:var(--bg)}
+
+/* nav */
+.nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:color-mix(in srgb,var(--deep) 92%,transparent);backdrop-filter:blur(12px);border-bottom:1px solid color-mix(in srgb,var(--on-deep) 10%,transparent)}
+.nav .wrap{display:flex;align-items:center;gap:22px;padding-block:12px}
+.mark{display:flex;align-items:center;gap:11px;text-decoration:none;color:var(--on-deep)}
+.mark .ic{width:36px;height:36px;border-radius:10px;background:linear-gradient(135deg,#3fd0b2,#167a68);display:grid;place-items:center;color:#03201a}
+.mark b{font:800 19px var(--f-display);display:block;line-height:1.05}
+.mark small{font-size:11.5px;color:var(--on-deep-2)}
+.nav nav{display:flex;gap:4px;margin-left:auto}
+.nav nav a{color:var(--on-deep-2);text-decoration:none;font-weight:500;font-size:14.5px;padding:8px 11px;border-radius:8px}
+.nav nav a:hover{color:var(--on-deep);background:color-mix(in srgb,var(--on-deep) 8%,transparent)}
+.nav .btn{padding:9px 16px;font-size:14px}
+
+/* hero */
+.hero{position:relative;overflow:hidden;background:radial-gradient(900px 520px at 85% -10%,#155a4e 0%,transparent 65%),radial-gradient(700px 500px at -10% 120%,#0d3d36 0%,transparent 70%),var(--deep);color:var(--on-deep)}
+.hero .wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:48px;align-items:center;padding-block:72px 120px}
+.hero .eyebrow{color:var(--mint)}
+.hero h1{font-size:clamp(38px,5.2vw,64px);font-weight:800;line-height:1.02;letter-spacing:-.035em;margin:16px 0 20px}
+.hero h1 em{font-style:normal;color:var(--mint)}
+.hero .lead{font-size:19px;color:var(--on-deep-2);max-width:54ch}
+.hero .cta{display:flex;gap:12px;flex-wrap:wrap;margin:30px 0 22px}
+.trust{display:flex;gap:18px;flex-wrap:wrap;font:500 13px var(--f-mono);color:var(--on-deep-2)}
+.trust span{display:flex;align-items:center;gap:7px}
+.trust i{width:7px;height:7px;border-radius:50%;background:var(--mint);box-shadow:0 0 0 4px color-mix(in srgb,var(--mint) 20%,transparent)}
+.stage{position:relative;min-height:470px}
+.shot{border-radius:14px;overflow:hidden;background:#fff;box-shadow:0 50px 90px -30px rgba(0,0,0,.8),0 0 0 1px rgba(255,255,255,.12)}
+.stage .s1{position:absolute;z-index:2;width:90%;right:-3%;top:4px;transform:perspective(1800px) rotateY(-9deg) rotateX(3deg);transform-origin:right center}
+.stage .s2{position:absolute;z-index:1;width:54%;left:-4%;top:52%;opacity:.92;transform:perspective(1800px) rotateY(-9deg) rotateX(3deg)}
+.toastcard{position:absolute;right:0;bottom:2%;z-index:3;background:#fff;color:#0d1f1b;border-radius:14px;padding:12px 14px;box-shadow:0 24px 50px -18px rgba(0,0,0,.6);display:flex;gap:11px;align-items:center;max-width:300px;font-size:13.5px}
+.toastcard b{display:block;font:700 14px var(--f-display)}
+.toastcard .dot{width:12px;height:12px;border-radius:50%;background:#d9483b;flex:none;box-shadow:0 0 0 5px rgba(217,72,59,.18)}
+.pulse{position:absolute;left:0;right:0;bottom:22px;height:90px;pointer-events:none;opacity:.85}
+.pulse path{fill:none;stroke:var(--mint);stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round;filter:drop-shadow(0 0 6px rgba(63,208,178,.6))}
+.pulse .base{stroke:color-mix(in srgb,var(--mint) 22%,transparent);filter:none}
+@media (prefers-reduced-motion:no-preference){
+  .pulse .trace{stroke-dasharray:1400 2200;animation:trace 4.2s linear infinite}
+  @keyframes trace{from{stroke-dashoffset:1400}to{stroke-dashoffset:-2200}}
+}
+
+/* readout */
+.readout{background:var(--deep-2);color:var(--on-deep);border-top:1px solid color-mix(in srgb,var(--on-deep) 10%,transparent)}
+.readout .wrap{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0}
+.readout div{padding:20px 22px;border-left:1px solid color-mix(in srgb,var(--on-deep) 12%,transparent);display:flex;flex-direction:column;gap:4px}
+.readout div:first-child{border-left:0;padding-left:0}
+.readout small{font:600 11px var(--f-mono);letter-spacing:.1em;text-transform:uppercase;color:var(--on-deep-2)}
+.readout b{font:800 26px var(--f-display);letter-spacing:-.02em}
+.readout b.hot{color:#ff8a7d} .readout b.ok{color:var(--mint)}
+.readout span{font-size:13.5px;color:var(--on-deep-2)}
+.readout .note{grid-column:1/-1;border:0;padding:0 0 14px;font:500 11.5px var(--f-mono);color:var(--on-deep-2);opacity:.75}
+
+/* sections */
+section{padding-block:96px}
+.sec-h{display:flex;flex-direction:column;gap:12px;max-width:760px;margin-bottom:44px}
+.sec-h h2{font-size:clamp(30px,3.6vw,44px);font-weight:800;line-height:1.08}
+.sec-h p{font-size:18px;color:var(--muted)}
+.problem{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.pcard{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:22px;display:flex;flex-direction:column;gap:10px}
+.pcard .when{font:600 12px var(--f-mono);letter-spacing:.08em;text-transform:uppercase;color:var(--faint)}
+.pcard h3{font-size:20px}
+.pcard .bin{display:flex;align-items:center;gap:9px;color:var(--muted);font-size:14.5px;margin-top:auto}
+.pcard .bin i{width:26px;height:26px;border-radius:7px;border:1.5px dashed var(--faint);display:grid;place-items:center;font:700 13px var(--f-mono);font-style:normal;color:var(--faint)}
+.punch{margin-top:26px;font:700 clamp(20px,2.4vw,27px)/1.3 var(--f-display);max-width:46ch}
+.punch span{color:var(--coral)}
+
+/* how */
+.how{background:var(--panel);border-block:1px solid var(--line)}
+.step{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.2fr);gap:56px;align-items:center;padding-block:34px}
+.step:nth-child(even) .txt{order:2}
+.step .num{font:800 15px var(--f-mono);color:var(--teal);display:flex;align-items:center;gap:12px}
+.step .num::after{content:"";height:1px;flex:1;max-width:80px;background:var(--line)}
+.step h3{font-size:clamp(24px,2.6vw,32px);font-weight:800;margin:12px 0 12px;line-height:1.12}
+.step p{color:var(--muted);font-size:17px;max-width:48ch}
+.step ul{margin:16px 0 0;padding:0;list-style:none;display:flex;flex-direction:column;gap:9px}
+.step li{display:flex;gap:10px;align-items:flex-start;font-size:15.5px}
+.step li::before{content:"";width:18px;height:18px;border-radius:50%;flex:none;margin-top:3px;background:var(--teal-soft) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M5 10.5l3 3 7-7' fill='none' stroke='%230c7a68' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/14px no-repeat}
+.step .quote{margin-top:16px;padding:12px 16px;border-left:3px solid var(--mint);background:var(--panel-2);border-radius:0 12px 12px 0;font:500 15.5px var(--f-body);font-style:italic}
+.frame{border-radius:16px;overflow:hidden;border:1px solid var(--line);box-shadow:0 40px 70px -40px rgba(6,33,29,.45)}
+
+/* audiences */
+.aud{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.acard{background:var(--panel);border:1px solid var(--line);border-radius:20px;padding:24px;display:flex;flex-direction:column;gap:14px;position:relative;overflow:hidden}
+.acard::before{content:"";position:absolute;inset:0 0 auto;height:4px;background:linear-gradient(90deg,var(--c1),var(--c2,var(--c1)))}
+.acard h3{font-size:21px}
+.acard p{color:var(--muted);font-size:15.5px}
+.acard ul{margin:0;padding-left:18px;display:flex;flex-direction:column;gap:6px;font-size:15px}
+.chips{display:flex;gap:6px;flex-wrap:wrap;margin-top:auto}
+.mb{display:inline-flex;align-items:center;gap:6px;font:600 11.5px var(--f-mono);letter-spacing:.05em;padding:4px 9px;border-radius:7px;color:var(--m);background:color-mix(in srgb,var(--m) 13%,transparent);border:1px solid color-mix(in srgb,var(--m) 30%,transparent)}
+.mb b{font-weight:700}
+.m-cap{--m:var(--m-cap)} .m-clin{--m:var(--m-clin)} .m-lot{--m:var(--m-lot)} .m-frc{--m:var(--m-frc)} .m-wbl{--m:var(--m-wbl)} .m-fmea{--m:var(--m-fmea)} .m-grw{--m:var(--m-grw)}
+
+/* modules table */
+.mods{background:var(--panel);border:1px solid var(--line);border-radius:20px;overflow:hidden}
+.mods .row{display:grid;grid-template-columns:90px minmax(0,1.1fr) minmax(0,1.6fr) minmax(0,1.2fr);gap:18px;padding:18px 22px;border-top:1px solid var(--line);align-items:center}
+.mods .row:first-child{border-top:0;background:var(--panel-2);font:600 11.5px var(--f-mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted);padding-block:12px}
+.mods .row b{font:700 17px var(--f-display)}
+.mods .who{display:block;font:500 12px var(--f-mono);color:var(--faint);margin-top:2px}
+.mods .q{color:var(--muted);font-size:15px}
+.mods .meth{font:500 13px var(--f-mono);color:var(--muted)}
+.gallery{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:22px}
+.gallery figure{margin:0;display:flex;flex-direction:column;gap:8px}
+.gallery figcaption{font-size:14px;color:var(--muted)}
+
+/* film */
+.film{background:var(--deep);color:var(--on-deep)}
+.film .sec-h p{color:var(--on-deep-2)}
+.film .eyebrow{color:var(--mint)}
+.player{border-radius:18px;overflow:hidden;box-shadow:0 50px 90px -30px rgba(0,0,0,.8),0 0 0 1px rgba(255,255,255,.1);background:#000}
+.player video{width:100%;aspect-ratio:16/9;max-width:100%;background:#000}
+.filmnote{display:flex;gap:18px;flex-wrap:wrap;margin-top:14px;font:500 13px var(--f-mono);color:var(--on-deep-2)}
+
+/* security */
+.secgrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.sec{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:20px;display:flex;flex-direction:column;gap:10px}
+.sec .ic{width:44px;height:44px;border-radius:12px;background:var(--teal-soft);color:var(--teal);display:grid;place-items:center}
+.sec h3{font-size:18px}
+.sec p{color:var(--muted);font-size:15px}
+
+/* request */
+.req{background:linear-gradient(180deg,var(--bg),var(--panel-2))}
+.req .grid{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:48px;align-items:start}
+.flow{list-style:none;margin:28px 0 0;padding:0;display:flex;flex-direction:column;gap:18px;counter-reset:f}
+.flow li{counter-increment:f;display:grid;grid-template-columns:40px minmax(0,1fr);gap:14px}
+.flow li::before{content:counter(f);width:36px;height:36px;border-radius:50%;background:var(--deep);color:var(--mint);display:grid;place-items:center;font:800 15px var(--f-mono)}
+.flow b{font:700 17px var(--f-display);display:block}
+.flow span{color:var(--muted);font-size:15px}
+form{background:var(--panel);border:1px solid var(--line);border-radius:22px;padding:28px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px 18px;box-shadow:0 40px 80px -50px rgba(6,33,29,.45)}
+form .full{grid-column:1/-1}
+form h3{font-size:22px}
+.fld{display:flex;flex-direction:column;gap:6px;min-width:0}
+.fld label{font-weight:600;font-size:14px}
+.fld .opt{font-weight:400;color:var(--faint)}
+input,select,textarea{font:inherit;font-size:15.5px;color:var(--ink);background:var(--bg);border:1.5px solid var(--line);border-radius:11px;padding:11px 13px;width:100%;min-width:0}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--teal);box-shadow:0 0 0 4px color-mix(in srgb,var(--teal) 18%,transparent)}
+textarea{min-height:96px;resize:vertical}
+.agree{display:flex;gap:11px;align-items:flex-start;font-size:14.5px;color:var(--muted)}
+.agree input{width:19px;height:19px;margin-top:2px;accent-color:var(--teal);flex:none}
+.err{color:var(--coral);font-weight:600;font-size:14.5px;min-height:1px}
+.hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+.thanks{background:var(--panel);border:1px solid var(--line);border-radius:22px;padding:36px;display:flex;flex-direction:column;gap:12px}
+.thanks .ic{width:56px;height:56px;border-radius:50%;background:var(--teal-soft);display:grid;place-items:center;color:var(--teal)}
+.thanks h3{font-size:26px}
+
+/* faq */
+.faq{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px 24px}
+details{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:16px 20px}
+summary{cursor:pointer;font:700 16.5px var(--f-display);list-style:none;display:flex;justify-content:space-between;gap:12px}
+summary::after{content:"+";font:600 20px var(--f-mono);color:var(--teal)}
+details[open] summary::after{content:"–"}
+details p{margin-top:10px;color:var(--muted);font-size:15.5px}
+
+/* footer */
+footer{background:var(--deep);color:var(--on-deep-2);padding-block:40px;font-size:14px}
+footer .wrap{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;align-items:center}
+footer a{color:var(--on-deep);text-decoration:none;margin-right:16px}
+footer a:hover{text-decoration:underline}
+footer .logo{height:34px;width:auto;background:#fff;border-radius:8px;padding:4px 8px}
+
+@media (max-width:980px){
+  .hero .wrap{grid-template-columns:minmax(0,1fr);padding-block:56px 110px}
+  .stage{min-height:auto;display:flex;flex-direction:column;gap:14px}
+  .stage .s1,.stage .s2,.toastcard{position:static;transform:none;width:100%;max-width:100%}
+  .stage .s2{display:none}
+  .readout .wrap{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .readout div{border-left:0;padding-left:0}
+  .problem,.aud,.secgrid,.gallery{grid-template-columns:minmax(0,1fr)}
+  .step{grid-template-columns:minmax(0,1fr);gap:22px}
+  .step:nth-child(even) .txt{order:0}
+  .mods .row{grid-template-columns:70px minmax(0,1fr)}
+  .mods .row > :nth-child(3),.mods .row > :nth-child(4){grid-column:2}
+  .mods .row:first-child{display:none}
+  .req .grid,.faq{grid-template-columns:minmax(0,1fr)}
+  .nav nav{display:none}
+  .nav .btn{margin-left:auto}
+}
+@media (max-width:620px){
+  section{padding-block:68px}
+  form{grid-template-columns:minmax(0,1fr);padding:20px}
+  .readout .wrap{grid-template-columns:minmax(0,1fr)}
+  .hero .lead{font-size:17px}
+  .mark small{display:none}
+}
+</style>
+
+<header class="nav"><div class="wrap">
+  <a class="mark" href="#top" aria-label="Quellvane home"><span class="ic"><svg viewBox="0 0 26 26" width="20" height="20" aria-hidden="true"><path d="M3 15 L9 15 L11.5 8 L15 19 L17.5 12 L23 12" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><b>Quellvane</b><small>by DuurveX-Tech</small></span></a>
+  <nav aria-label="Page"><a href="#how">How it works</a><a href="#teams">For your team</a><a href="#modules">Modules</a><a href="#security">Security</a><a href="#faq">FAQ</a></nav>
+  <a class="btn solid" href="#request">Request access</a>
+</div></header>
+
+<main id="top">
+<div class="hero">
+  <div class="wrap">
+    <div>
+      <p class="eyebrow">Hands-free device reliability for the cath lab</p>
+      <h1>Fewer device surprises for <em>every cath lab team.</em></h1>
+      <p class="lead">Quellvane listens for device problems during prep and cases, warns clinicians before a failing lot reaches the next patient, and gives quality and biomed the evidence to fix it.</p>
+      <div class="cta"><a class="btn solid" href="#request">Request access</a><a class="btn line" href="#film">▶ Watch the 3-minute film</a></div>
+      <div class="trust"><span><i></i>Access by approval</span><span><i></i>One-time code sign-in</span><span><i></i>No patient data</span></div>
+    </div>
+    <div class="stage" aria-label="Quellvane screens">
+      <div class="shot s1"><img src="assets/shot-briefing.jpg" width="1600" height="1000" alt="Quellvane team briefing listing lots not to open, rooms to prep and fixes in progress"></div>
+      <div class="shot s2"><img src="assets/shot-prep-dark.jpg" width="1600" height="1000" alt="Room prep checklist completed by voice, showing Room ready 12 of 12"></div>
+      <div class="toastcard" role="img" aria-label="Spoken alert: balloon catheter lot 1840 is on hold, please swap it"><span class="dot"></span><span><b>“Lot 1840 is on hold.”</b>Spoken in the room before the package is opened.</span></div>
+    </div>
+  </div>
+  <svg class="pulse" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true">
+    <path class="base" d="M0 60 H300 L330 60 L350 20 L372 82 L392 44 L410 60 H760 L790 60 L810 14 L832 84 L852 40 L870 60 H1440"/>
+    <path class="trace" d="M0 60 H300 L330 60 L350 20 L372 82 L392 44 L410 60 H760 L790 60 L810 14 L832 84 L852 40 L870 60 H1440"/>
+  </svg>
+</div>
+
+<div class="readout" aria-label="Example readout"><div class="wrap">
+  <div><small>Cath Lab 2 · 6:58 AM</small><b class="ok">12 of 12</b><span>Room ready, checklist filled by voice</span></div>
+  <div><small>Lot L-7718 · guide catheter</small><b class="hot">5.3×</b><span>Kink rate against normal · held</span></div>
+  <div><small>Patients between kinks</small><b>15 <span style="font:600 15px var(--f-body)">vs 80</span></b><span>Normal for this device</span></div>
+  <div><small>FR-0012 · verification</small><b class="ok">46 / 230</b><span>Clean devices since the fix</span></div>
+  <p class="note">Example data from the built-in demo project. Names and numbers are fictional.</p>
+</div></div>
+
+<section aria-labelledby="pb-h"><div class="wrap">
+  <div class="sec-h"><p class="eyebrow">The problem</p><h2 id="pb-h">A device fails mid-case. It is swapped, thrown away, and forgotten.</h2>
+    <p>Each team sees one small failure. Nobody sees the pattern across rooms and weeks, until a whole lot has reached patients.</p></div>
+  <div class="problem">
+    <div class="pcard"><span class="when">Cath Lab 1 · Monday</span><h3>Guide catheter kinks while turning</h3><span class="bin"><i>✕</i>Swapped, not reported</span></div>
+    <div class="pcard"><span class="when">Cath Lab 2 · Wednesday</span><h3>Balloon slow to deflate</h3><span class="bin"><i>✕</i>Case finished, not reported</span></div>
+    <div class="pcard"><span class="when">Cath Lab 1 · Friday</span><h3>Stent will not cross the lesion</h3><span class="bin"><i>✕</i>New one opened, not reported</span></div>
+  </div>
+  <p class="punch">Same lot? <span>Nobody can tell.</span> Quellvane can, without asking anyone to stop and fill in a form.</p>
+</div></section>
+
+<section class="how" id="how" aria-labelledby="how-h"><div class="wrap">
+  <div class="sec-h"><p class="eyebrow">How it works</p><h2 id="how-h">From the morning huddle to a verified fix</h2><p>Four steps, all in one project. In the room, everything happens by voice.</p></div>
+  <div class="step"><div class="txt"><span class="num">01</span><h3>Brief the team before the first case</h3><p>The team briefing lists lots not to open, lots to use with care, room readiness and fixes in progress. Quellvane reads the warnings aloud in the room.</p>
+      <p class="quote">“Quellvane, today's briefing.”</p></div>
+    <div class="frame"><img src="assets/shot-briefing.jpg" width="1600" height="1000" loading="lazy" alt="Team briefing with Do not use, Caution and Info lines"></div></div>
+  <div class="step"><div class="txt"><span class="num">02</span><h3>Prep the room by voice</h3><p>The checklist fills as the team talks and lays out devices. Every lot is checked against the hold list before a package is opened.</p>
+      <ul><li>“Pressures zeroed.” “Defib checked.” Items tick green.</li><li>A held lot turns red and Quellvane says so out loud.</li><li>“Room ready, 12 of 12” is recorded with the time.</li></ul></div>
+    <div class="frame"><img src="assets/shot-prep-dark.jpg" width="1600" height="1000" loading="lazy" alt="Prep checklist on a dark room display, all items complete"></div></div>
+  <div class="step"><div class="txt"><span class="num">03</span><h3>Capture problems hands-free, and catch the lot</h3><p>“It's kinked, open another one.” Quellvane drafts a report on the device in use, notices the swap, and the team confirms by voice at sign-out. Every report joins its lot.</p>
+      <ul><li>Confidence that a lot has a real problem, not bad luck</li><li>Patients and days between problems, against normal</li><li>A person always decides on a hold</li></ul></div>
+    <div class="frame"><img src="assets/shot-lot.jpg" width="1600" height="1000" loading="lazy" alt="Lot L-7718 details with confidence over 99.99 percent and 15 patients between problems"></div></div>
+  <div class="step"><div class="txt"><span class="num">04</span><h3>Close the loop with FRACAS and 8D</h3><p>Each problem moves from report to containment, root cause, corrective action and verification. D1 to D8 are drafted from the evidence in every study, and an incident closes only when enough clean devices prove the fix worked.</p></div>
+    <div class="frame"><img src="assets/shot-8d.jpg" width="1600" height="1000" loading="lazy" alt="FRACAS 8D steps drafted from evidence"></div></div>
+</div></section>
+
+<section id="teams" aria-labelledby="t-h"><div class="wrap">
+  <div class="sec-h"><p class="eyebrow">For everyone in the hospital</p><h2 id="t-h">Built for the people who live with device problems</h2><p>Start where you work. Every team shares the same evidence.</p></div>
+  <div class="aud">
+    <div class="acard" style="--c1:var(--m-cap);--c2:var(--m-clin)"><h3>Cardiologists, surgeons, nurses and technologists</h3><p>Stay focused on the patient. Say what happened; Quellvane does the paperwork.</p>
+      <ul><li>Voice prep checklist and held-lot warnings</li><li>Morning briefing, read aloud</li><li>Case impact: delays, swaps, minutes lost</li><li>Record what the team needs from each device</li></ul>
+      <div class="chips"><span class="mb m-cap"><b>CAP</b> Room capture</span><span class="mb m-clin"><b>CLIN</b> Clinical impact</span></div></div>
+    <div class="acard" style="--c1:var(--m-lot);--c2:var(--m-frc)"><h3>Quality, risk and supply</h3><p>See which lots fail more than normal, with the confidence to act, and close each problem properly.</p>
+      <ul><li>Early-warning alerts for every lot</li><li>Hold and release with a reason on record</li><li>Closed-loop FRACAS with 8D reports</li><li>Problem summaries for manufacturers</li></ul>
+      <div class="chips"><span class="mb m-lot"><b>LOT</b> Lot surveillance</span><span class="mb m-frc"><b>FRC</b> FRACAS</span></div></div>
+    <div class="acard" style="--c1:var(--m-wbl);--c2:var(--m-grw)"><h3>Biomedical and reliability engineers</h3><p>Plan replacements, check design risk against what the rooms report, and prove corrective actions worked.</p>
+      <ul><li>Weibull life data and B10 replacement intervals</li><li>FMEA ratings checked against field data</li><li>Crow–AMSAA growth and demonstrated MTBF</li></ul>
+      <div class="chips"><span class="mb m-wbl"><b>WBL</b> Weibull</span><span class="mb m-fmea"><b>FMEA</b> FMEA</span><span class="mb m-grw"><b>GRW</b> Growth</span></div></div>
+  </div>
+</div></section>
+
+<section id="modules" aria-labelledby="m-h" style="padding-top:0"><div class="wrap">
+  <div class="sec-h"><p class="eyebrow">Modules</p><h2 id="m-h">Seven analyses, one project</h2><p>Each module is its own study with inputs, results, plots, a report and the methods behind it. Findings from every module flow into FRACAS.</p></div>
+  <div class="mods" role="table" aria-label="Quellvane modules">
+    <div class="row" role="row"><span role="columnheader">Code</span><span role="columnheader">Module</span><span role="columnheader">Answers</span><span role="columnheader">Key methods</span></div>
+    <div class="row" role="row"><span role="cell"><span class="mb m-cap"><b>CAP</b></span></span><span role="cell"><b>Room capture</b><span class="who">Cath lab team</span></span><span class="q" role="cell">Is the room ready, and which device failed during the case?</span><span class="meth" role="cell">voice checklist · hold check · swap detection</span></div>
+    <div class="row" role="row"><span role="cell"><span class="mb m-clin"><b>CLIN</b></span></span><span role="cell"><b>Clinical impact</b><span class="who">Cath lab team</span></span><span class="q" role="cell">What do device problems cost the team, and what reliability do clinicians need?</span><span class="meth" role="cell">briefing · lookback · burden score 1–125</span></div>
+    <div class="row" role="row"><span role="cell"><span class="mb m-lot"><b>LOT</b></span></span><span role="cell"><b>Lot surveillance</b><span class="who">Quality office</span></span><span class="q" role="cell">Which lots fail more than normal, and how sure are we?</span><span class="meth" role="cell">binomial confidence · Wilson range</span></div>
+    <div class="row" role="row"><span role="cell"><span class="mb m-frc"><b>FRC</b></span></span><span role="cell"><b>FRACAS</b><span class="who">Quality office</span></span><span class="q" role="cell">How do we close each problem with evidence and prove the fix?</span><span class="meth" role="cell">D1–D8 from evidence · success-run</span></div>
+    <div class="row" role="row"><span role="cell"><span class="mb m-wbl"><b>WBL</b></span></span><span role="cell"><b>Weibull life data</b><span class="who">Biomed</span></span><span class="q" role="cell">How long do reusable devices last, and when should they be replaced?</span><span class="meth" role="cell">MLE · rank regression · B10</span></div>
+    <div class="row" role="row"><span role="cell"><span class="mb m-fmea"><b>FMEA</b></span></span><span role="cell"><b>FMEA</b><span class="who">Design and quality</span></span><span class="q" role="cell">Which failure modes carry the most risk, and does field data agree?</span><span class="meth" role="cell">RPN · action priority · field check</span></div>
+    <div class="row" role="row"><span role="cell"><span class="mb m-grw"><b>GRW</b></span></span><span role="cell"><b>Reliability growth</b><span class="who">Sustaining</span></span><span class="q" role="cell">Are corrective actions working, and have we shown the MTBF goal?</span><span class="meth" role="cell">Crow–AMSAA · Duane · Laplace</span></div>
+  </div>
+  <div class="gallery">
+    <figure><div class="frame"><img src="assets/shot-impact.jpg" width="1600" height="1000" loading="lazy" alt="Case impact with minutes lost by device type"></div><figcaption>Case impact: delays, swaps and a lookback for held lots</figcaption></figure>
+    <figure><div class="frame"><img src="assets/shot-weibull.jpg" width="1600" height="1000" loading="lazy" alt="Weibull probability plot"></div><figcaption>Weibull probability plot with B10 life</figcaption></figure>
+    <figure><div class="frame"><img src="assets/shot-fmea.jpg" width="1600" height="1000" loading="lazy" alt="FMEA field check table"></div><figcaption>FMEA ratings checked against the rooms' reports</figcaption></figure>
+  </div>
+</div></section>
+
+<section class="film" id="film" aria-labelledby="f-h"><div class="wrap">
+  <div class="sec-h"><p class="eyebrow">Film</p><h2 id="f-h">See one heart procedure, step by step</h2><p>A three-minute concept film: prep by voice, a kinked catheter caught hands-free, and two lots held before more patients.</p></div>
+  <div class="player"><video controls preload="none" playsinline poster="assets/film-poster.jpg"><source src="assets/quellvane-film.mp4" type="video/mp4">Your browser cannot play this video.</video></div>
+  <div class="filmnote"><span>About 3 minutes</span><span>Captions on screen, no sound needed</span><span>Fictional hospital and data</span></div>
+</div></section>
+
+<section id="security" aria-labelledby="s-h"><div class="wrap">
+  <div class="sec-h"><p class="eyebrow">Security and privacy</p><h2 id="s-h">Approved people only. No patient data. Your data stays with you.</h2></div>
+  <div class="secgrid">
+    <div class="sec"><span class="ic"><svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l7 3v5c0 5-3.5 8.5-7 10-3.5-1.5-7-5-7-10V6z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M9 12l2 2 4-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span><h3>Access by approval</h3><p>We review every request and approve named work email addresses. Access can be removed at any time.</p></div>
+    <div class="sec"><span class="ic"><svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="10" width="16" height="10" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3" fill="none" stroke="currentColor" stroke-width="2"/></svg></span><h3>One-time code sign-in</h3><p>Every sign-in uses a code sent to your work email, enforced by Cloudflare before the app loads. No passwords to leak.</p></div>
+    <div class="sec"><span class="ic"><svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h9l4 4v14H6z M14 3v5h5 M9 13h7 M9 17h5" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg></span><h3>Agreement on first open</h3><p>Each user accepts the licence agreement before using Quellvane, and again whenever it changes.</p></div>
+    <div class="sec"><span class="ic"><svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="9" r="4" fill="none" stroke="currentColor" stroke-width="2"/><path d="M4 21c1.5-4 14.5-4 16 0" fill="none" stroke="currentColor" stroke-width="2"/><path d="M3 3l18 18" stroke="currentColor" stroke-width="2"/></svg></span><h3>No patient information</h3><p>Quellvane records devices, lots, times, rooms and procedure types. Never names, record numbers or dates of birth.</p></div>
+    <div class="sec"><span class="ic"><svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><path d="M8 20h8M12 16v4" stroke="currentColor" stroke-width="2"/></svg></span><h3>Your data stays with you</h3><p>Projects stay on your device and in files you save. DuurveX-Tech does not receive your hospital's data.</p></div>
+    <div class="sec"><span class="ic"><svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><rect x="9" y="3" width="6" height="11" rx="3" fill="none" stroke="currentColor" stroke-width="2"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3" fill="none" stroke="currentColor" stroke-width="2"/></svg></span><h3>No audio stored</h3><p>Only device events are kept. Voice in procedure rooms is used after your privacy and IT teams approve it.</p></div>
+  </div>
+</div></section>
+
+<section class="req" id="request" aria-labelledby="r-h"><div class="wrap"><div class="grid">
+  <div>
+    <div class="sec-h" style="margin-bottom:0"><p class="eyebrow">Request access</p><h2 id="r-h">Bring Quellvane to your cath lab</h2><p>Access is by approval for hospitals, clinical teams and the engineers who support them.</p></div>
+    <ol class="flow">
+      <li><div><b>Request access</b><span>Fill in the form. Every request is reviewed by our team.</span></div></li>
+      <li><div><b>We review and approve</b><span>Usually within one business day. We email you the Quellvane address.</span></div></li>
+      <li><div><b>Sign in with a one-time code</b><span>Enter your work email and type the code we send to it.</span></div></li>
+      <li><div><b>Accept the agreement and start</b><span>Explore the built-in example project, then set up your own rooms and devices.</span></div></li>
+    </ol>
+  </div>
+  <div id="formArea">
+    <form id="reqForm" novalidate>
+      <h3 class="full">Request access</h3>
+      <div class="fld"><label for="fName">Full name</label><input id="fName" name="name" autocomplete="name" required></div>
+      <div class="fld"><label for="fEmail">Work email</label><input id="fEmail" name="email" type="email" autocomplete="email" required></div>
+      <div class="fld"><label for="fOrg">Hospital or organisation</label><input id="fOrg" name="organisation" autocomplete="organization" required></div>
+      <div class="fld"><label for="fRole">Role</label><select id="fRole" name="role" required><option value="">Choose one</option><option>Interventional cardiologist</option><option>Surgeon</option><option>Electrophysiologist</option><option>Cath lab nurse or technologist</option><option>Cath lab or perioperative manager</option><option>Quality, risk or patient safety</option><option>Biomedical / clinical engineering</option><option>Supply chain or value analysis</option><option>Reliability or device engineering</option><option>IT or security</option><option>Other</option></select></div>
+      <div class="fld"><label for="fCountry">Country</label><input id="fCountry" name="country" autocomplete="country-name" required></div>
+      <div class="fld"><label for="fRooms">Procedure rooms <span class="opt">(optional)</span></label><select id="fRooms" name="rooms"><option value="">Choose</option><option>1</option><option>2–3</option><option>4–6</option><option>7 or more</option><option>Not a hospital</option></select></div>
+      <div class="fld full"><label for="fMsg">What would you like to use Quellvane for? <span class="opt">(optional)</span></label><textarea id="fMsg" name="message" placeholder="For example: a pilot in two cath labs, starting with guide catheters and stents"></textarea></div>
+      <div class="hp" aria-hidden="true"><label for="fGotcha">Leave this empty</label><input id="fGotcha" name="_gotcha" tabindex="-1" autocomplete="off"></div>
+      <label class="agree full"><input type="checkbox" id="fAgree" required><span>I agree to the <a href="terms.html" target="_blank" rel="noopener">Terms of Use</a> and have read the <a href="privacy.html" target="_blank" rel="noopener">Privacy Policy</a>. DuurveX-Tech may contact me about my request.</span></label>
+      <p class="err full" id="fErr" role="alert"></p>
+      <div class="full"><button class="btn dark" id="fSubmit" type="submit">Request access</button></div>
+    </form>
+    <div class="thanks" id="thanks" hidden tabindex="-1">
+      <span class="ic"><svg width="28" height="28" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      <h3>Request received</h3><p>Thank you. Our team reviews every request, usually within one business day. Once approved, we email you the Quellvane address and how to sign in with a one-time code.</p>
+    </div>
+  </div>
+</div></div></section>
+
+<section id="faq" aria-labelledby="q-h"><div class="wrap">
+  <div class="sec-h"><p class="eyebrow">Questions</p><h2 id="q-h">Frequently asked</h2></div>
+  <div class="faq">
+    <details><summary>Does Quellvane store patient information?</summary><p>No. It records devices, lots, times, rooms and procedure types only. The agreement every user accepts forbids entering patient information, typed or spoken.</p></details>
+    <details><summary>Is it a medical device?</summary><p>No. Quellvane does not diagnose, treat or support clinical decisions for any patient. It gives teams device reliability evidence; qualified people make every decision.</p></details>
+    <details><summary>Does anyone have to touch a screen in the room?</summary><p>No. The checklist fills by voice, devices are identified as they are laid out, and reports are confirmed by voice at sign-out. Desk screens are for the quality office and biomed.</p></details>
+    <details><summary>Where does our data go?</summary><p>It stays on your devices and in project files you save. DuurveX-Tech does not receive it. Only sign-in details are processed by our access provider, Cloudflare.</p></details>
+    <details><summary>How does voice work, and is audio kept?</summary><p>Voice uses your browser's speech recognition, which may process audio through the browser maker's service. Quellvane keeps only device events and stores no audio. Use voice in procedure rooms after your privacy and IT teams approve it.</p></details>
+    <details><summary>What do we need to run it?</summary><p>A current Chrome or Edge on Windows, macOS or a tablet, a work email, and for voice a microphone. It installs from the browser in one click and works offline.</p></details>
+    <details><summary>Who can get access?</summary><p>Clinicians, quality, biomedical engineering, supply and IT teams at healthcare organisations, and engineers who support them. Each request is reviewed, and access is granted per work email.</p></details>
+    <details><summary>Are the calculations validated?</summary><p>The methods are standard reliability engineering models, checked against independent calculations. Results are estimates for your engineers and clinical leaders to review; every module's Methods tab explains them.</p></details>
+  </div>
+</div></section>
+</main>
+
+<footer><div class="wrap">
+  <div style="display:flex;align-items:center;gap:16px;flex-wrap:wrap"><img class="logo" src="assets/duurvextech-logo.png" alt="DuurveX-Tech" width="120" height="34"><span>Quellvane is a product of DuurveX-Tech.<br>© DuurveX-Tech 2025. All rights reserved.</span></div>
+  <div><a href="licence-agreement.html">Licence agreement</a><a href="terms.html">Terms of Use</a><a href="privacy.html">Privacy Policy</a><a href="https://www.duurvextech.com/">duurvextech.com</a></div>
+</div></footer>
+
+<script>
+const CONFIG = {
+  FORM_ENDPOINT: 'https://formspree.io/f/xljjnynq',   // form service address (the same form as EPT; requests are labelled "Quellvane")
+};
+(() => {
+  const f = document.getElementById('reqForm'), err = document.getElementById('fErr'), btn = document.getElementById('fSubmit');
+  f.addEventListener('submit', async e => {
+    e.preventDefault(); err.textContent = '';
+    const need = [['fName', 'your name'], ['fEmail', 'your work email'], ['fOrg', 'your hospital or organisation'], ['fRole', 'your role'], ['fCountry', 'your country']];
+    for (const [id, what] of need){ const el = document.getElementById(id); if (!el.value.trim()){ err.textContent = `Please enter ${what}.`; el.focus(); return; } }
+    const em = document.getElementById('fEmail');
+    if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(em.value.trim())){ err.textContent = 'Please enter a valid work email address.'; em.focus(); return; }
+    if (!document.getElementById('fAgree').checked){ err.textContent = 'Please agree to the Terms of Use to send your request.'; document.getElementById('fAgree').focus(); return; }
+    if (document.getElementById('fGotcha').value) return;
+    if (!CONFIG.FORM_ENDPOINT){ err.textContent = 'Access requests open soon. Please email contact@duurvextech.com.'; return; }
+    const data = Object.fromEntries(new FormData(f).entries());
+    data.product = 'Quellvane'; data._subject = 'Quellvane access request: ' + data.organisation; data.page = location.href;
+    btn.disabled = true; btn.textContent = 'Sending…';
+    let sent = false;
+    try { const r = await fetch(CONFIG.FORM_ENDPOINT, {method:'POST', headers:{'Content-Type':'application/json', Accept:'application/json'}, body:JSON.stringify(data)}); sent = r.ok; } catch (x) { sent = false; }
+    btn.disabled = false; btn.textContent = 'Request access';
+    if (!sent){ err.textContent = 'Your request could not be sent. Check your connection and try again, or email contact@duurvextech.com.'; return; }
+    try { if (window.gtag) gtag('event', 'quellvane_access_request', {role:data.role}); } catch (x) {}
+    f.hidden = true; const t = document.getElementById('thanks'); t.hidden = false; t.focus();
+  });
+})();
+</script>
+</body>
+</html>

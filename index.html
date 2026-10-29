@@ -367,6 +367,16 @@ section.block .wrap{padding-block:96px}
 @media (max-width:900px){.web .web-anim{order:2}}
 @media (prefers-reduced-motion: reduce){.a-slide1{opacity:1;animation:none}.a-slide2,.a-slide3{animation:none}.a-prog9{animation:none}.a-chat{opacity:1;animation:none}}
 
+
+/* Quellvane card animation */
+.a-ecg{stroke-dasharray:.35 .65;animation:aEcg 3s linear infinite}
+@keyframes aEcg{from{stroke-dashoffset:1}to{stroke-dashoffset:0}}
+.a-hold{animation:aHold 1.6s ease-in-out infinite}
+@keyframes aHold{0%,100%{opacity:1}50%{opacity:.45}}
+.a-say{animation:aSay 4s ease-in-out infinite}
+@keyframes aSay{0%,15%{opacity:0}25%,80%{opacity:1}100%{opacity:0}}
+@media (prefers-reduced-motion: reduce){.a-ecg,.a-hold,.a-say{animation:none}.a-ecg{stroke-dasharray:none}}
+
 /* Testimonials */
 .quotes{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
 .quote{margin:0;background:var(--glass);border:1px solid var(--line);border-radius:18px;padding:26px;display:flex;flex-direction:column;gap:18px}
@@ -620,21 +630,24 @@ section.block .wrap{padding-block:96px}
           <p>Software, hardware, telemetry, CAN bus, accelerated &amp; stress and clinical-needs reliability in one project, with every finding drawn into one 8D. Runs in your browser with approved access; your data stays with you.</p>
           <span class="go">Explore &amp; start free trial →</span>
         </a>
-        <a class="prod wide2" href="#contact">
+        <a class="prod wide2 qv" href="quellvane/">
           <div class="anim" aria-hidden="true"><svg viewBox="0 0 400 170">
-<defs><linearGradient id="qg" x1="0" x2="1"><stop offset="0" stop-color="#FF6B2C"/><stop offset=".5" stop-color="#FFB25C"/><stop offset="1" stop-color="#3CC9C1"/></linearGradient></defs>
-<path class="a-flow" d="M0 85 Q15 40 30 85 T60 85 T90 85 T120 85 T150 85 T180 85 Q190 70 200 85 Q215 95 230 85 Q245 80 260 85 L400 85" fill="none" stroke="url(#qg)" stroke-width="3" stroke-linecap="round"/>
-<g transform="translate(200 85)"><g class="a-spin">
-<path d="M0 0 C10 -18 6 -38 0 -48 C-6 -38 -10 -18 0 0Z" fill="#FFB25C"/>
-<path d="M0 0 C10 -18 6 -38 0 -48 C-6 -38 -10 -18 0 0Z" fill="#FF6B2C" transform="rotate(120)"/>
-<path d="M0 0 C10 -18 6 -38 0 -48 C-6 -38 -10 -18 0 0Z" fill="#3CC9C1" transform="rotate(240)"/></g>
-<circle r="7" fill="#08111D" stroke="#FFFFFF" stroke-width="2"/></g>
-<g font-family="IBM Plex Mono,monospace" font-size="10.5" fill="#C4D1DC"><text x="8" y="160">VARIATION IN</text><text x="300" y="160">STABLE OUT</text></g>
-</svg></div>
-          <span class="status">Software</span>
+<path d="M0 118 H90 L104 118 L114 88 L126 140 L136 104 L146 118 H250 L264 118 L274 88 L286 140 L296 104 L306 118 H400" fill="none" stroke="rgba(63,208,178,.22)" stroke-width="2"/>
+<path class="a-ecg" d="M0 118 H90 L104 118 L114 88 L126 140 L136 104 L146 118 H250 L264 118 L274 88 L286 140 L296 104 L306 118 H400" fill="none" stroke="#3FD0B2" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" pathLength="1"/>
+<g transform="translate(22 30)"><circle r="13" fill="rgba(63,208,178,.15)" stroke="#3FD0B2" stroke-width="1.5"/><rect x="-3.5" y="-7" width="7" height="10" rx="3.5" fill="#3FD0B2"/><path d="M-6 0 a6 6 0 0 0 12 0 M0 6 v3" fill="none" stroke="#3FD0B2" stroke-width="1.5"/>
+<g fill="none" stroke="#3FD0B2" stroke-width="1.5" stroke-linecap="round"><path class="a-ring" style="--d:0s" d="M18 -7 a10 10 0 0 1 0 14"/><path class="a-ring" style="--d:.4s" d="M23 -11 a16 16 0 0 1 0 22"/></g></g>
+<g font-family="IBM Plex Mono,monospace" font-size="10.5">
+<g><rect x="70" y="16" width="96" height="24" rx="7" fill="rgba(255,255,255,.06)" stroke="rgba(255,255,255,.2)"/><text x="80" y="32" fill="#C4D1DC">LOT 7702 ✓</text></g>
+<g class="a-hold"><rect x="174" y="16" width="118" height="24" rx="7" fill="rgba(217,72,59,.22)" stroke="#FF7A6C"/><text x="184" y="32" fill="#FFB4AA">LOT 1840 · HOLD</text></g>
+<g><rect x="300" y="16" width="92" height="24" rx="7" fill="rgba(255,255,255,.06)" stroke="rgba(255,255,255,.2)"/><text x="310" y="32" fill="#C4D1DC">LOT 2214 ✓</text></g>
+<text class="a-say" x="70" y="66" fill="#3FD0B2">“Lot 1840 is on hold — please swap it.”</text>
+<text x="8" y="162" fill="#C4D1DC">CATH LAB 2 · ROOM READY 12/12</text><text x="300" y="162" fill="#C4D1DC">FRACAS · 8D</text>
+</g></svg></div>
+          <span class="status live-s">Software · Access by approval</span>
           <h3>Quellvane</h3>
-          <div class="acr">QV</div>
-          <span class="go">Ask us →</span>
+          <div class="acr">Hands-free device reliability for the cath lab</div>
+          <p>Voice prep checklists, team briefings, lot surveillance, FRACAS and 8D, Weibull, FMEA and reliability growth. Warns clinicians before a failing lot reaches the next patient. No patient data.</p>
+          <span class="go">Explore &amp; request access →</span>
         </a>
         <a class="prod wide2" href="pages/acei.html">
           <div class="anim" aria-hidden="true"><svg viewBox="0 0 400 170">
